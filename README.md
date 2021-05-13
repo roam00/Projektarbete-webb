@@ -4,6 +4,8 @@ Konstruera databas
 Registreringsfunktion
 Inloggningsfunktion
 Fungerande kontakt med två API:er
+Slumpa aktivitet
+Skapa aktivitet
 Recensionsmöjlighet(?)
 Topplista(?)
 Sök-/filtreringsfunktion
