@@ -1,6 +1,6 @@
 # Projektarbete-webb
 
-Konstruera databas
+Konstruera databas (startad)
 Index-sida
 Registreringsfunktion
 Inloggningsfunktion
