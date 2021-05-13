@@ -9,7 +9,7 @@ Slumpa aktivitet
 Skapa aktivitet
 Recensionsmöjlighet(?)
 Topplista(?)
-Sök-/filtreringsfunktion
+Sök-/filtreringsfunktion!
 
 Admin-funktioner:
     Publicering av information från tjänsteleverantören
