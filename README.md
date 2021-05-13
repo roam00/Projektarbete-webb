@@ -1,6 +1,7 @@
 # Projektarbete-webb
 
 Konstruera databas
+Index-sida
 Registreringsfunktion
 Inloggningsfunktion
 Fungerande kontakt med två API:er
