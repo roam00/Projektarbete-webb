@@ -1,6 +1,6 @@
 # Projektarbete-webb
 
-Hejsn hejsan
-hejeh
-hehe
-tja 
+Registreringsfunktion
+Inloggningsfunktion
+Fungerande kontakt med två API:er
+
