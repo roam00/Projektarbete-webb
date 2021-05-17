@@ -9,16 +9,16 @@
 <body>
 
 <div class="box" id="header">
-    <h1> Register user </h1>
+    <h1> Registrera dig </h1>
     <form action="register.php">
-    <button type="submit"> Register </button>
+    <button type="submit"> Registrera dig </button>
     </form>
 </div>
 
 <div class="box" id="header">
-    <h1> Log in </h1>
+    <h1> Logga in </h1>
     <form action="login.php">
-    <button type="submit"> Log in</button>
+    <button type="submit"> Logga in</button>
     </form>
 </div>
 
