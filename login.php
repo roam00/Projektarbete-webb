@@ -7,9 +7,9 @@
     <BODY>
     <form>
   <label for="uname">Användarnamn:</label>
-  <input type="text" id="uname" name="uname"><br><br>
-  <label for="pword">Lösenord:</label>
-  <input type="text" id="pword" name="pword"><br><br>
+  <input type="text" id="username" name="username"><br><br>
+  <label for="password">Lösenord:</label>
+  <input type="text" id="password" name="password"><br><br>
   <input type="submit" value="Logga in">
 </form>
     </BODY>
