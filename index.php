@@ -22,6 +22,13 @@
     </form>
 </div>
 
+<div class="box" id="header">
+    <h1> Cocktail </h1>
+    <form action="cocktail.php">
+    <button type="submit"> Cocktail</button>
+    </form>
+</div>
+
 </form>
 
 </body>
