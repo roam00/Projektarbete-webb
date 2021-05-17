@@ -7,8 +7,8 @@
     <BODY>
         <FORM NAME="bored" METHOD="get" ACTION="http://www.boredapi.com/api/activity/">
             <FIELDSET>
-            <LEGEND>Välj akvititetsparametrar:</LEGEND>
-            <LABEL FOR="type">Välj aktivitetstyp:</LABEL>
+            <LEGEND>Choose activity parameters:</LEGEND>
+            <LABEL FOR="type">Activity type:</LABEL>
             <SELECT ID="type" NAME="type">
                 <OPTION VALUE="">-</OPTION>
                 <OPTION VALUE="education">Education</OPTION>
@@ -22,7 +22,7 @@
                 <OPTION VALUE="busywork">Busywork</OPTION>
             </SELECT>
             <BR>
-            <LABEL FOR="participants">Välj antal personer:</LABEL>
+            <LABEL FOR="participants">Number of people:</LABEL>
             <SELECT ID="participants" NAME="participants">
                 <OPTION VALUE="">-</OPTION>
                 <OPTION VALUE="1">1</OPTION>
@@ -31,7 +31,7 @@
                 <OPTION VALUE="4">4</OPTION>
             </SELECT>
             <BR>
-            <LABEL FOR="maxprice">Välj maxkostnad:</LABEL>
+            <LABEL FOR="maxprice">Max cost:</LABEL>
             <SELECT ID="maxprice" NAME="maxprice">
                 <OPTION VALUE="">-</OPTION>
                 <OPTION VALUE="0.1">0.1</OPTION>
@@ -46,7 +46,7 @@
                 <OPTION VALUE="1">1</OPTION>
             </SELECT>
             <BR>
-            <LABEL FOR="maxaccessibility">Välj tillgänglighet (lägre värde är mer tillgänglighet)</LABEL>
+            <LABEL FOR="maxaccessibility">Accessibility (lower number is more accessible)</LABEL>
             <SELECT ID="maxaccessibility" NAME="maxaccessibility">
                 <OPTION VALUE="">-</OPTION>
                 <OPTION VALUE="0.0">0.0</OPTION>
