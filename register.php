@@ -6,8 +6,8 @@
     <BODY>
     <div id="wrapper">
     <form name="myform" method="post" action="" onsubmit="">
-    <label for="name"></label>
-    <input type="text" id="name" name="name" placeholder="Namn">
+    <label for="username"></label>
+    <input type="text" id="username" name="username" placeholder="Namn">
     <label for="email"></label>
     <input type="text" id="email" name="email" placeholder="E-postadress">
     <label for="password"></label>
