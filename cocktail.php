@@ -21,6 +21,11 @@
     $json = file_get_contents($hmaps_request);
     $details = json_decode($json, TRUE);
     var_dump($details);
+    echo "<br>";
+    echo $hmaps_request[0];
+    echo "<br>";
+    echo gettype($details);
+    echo gettype($hmaps_request);
 
 ?>
 
