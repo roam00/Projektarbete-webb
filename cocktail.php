@@ -21,11 +21,24 @@
     $json = file_get_contents($hmaps_request);
     $details = json_decode($json, TRUE);
     var_dump($details);
+
+    
     echo "<br>";
-    echo $hmaps_request[0];
+    echo "<br>";
+    print_r($details);
+    echo "<br>";
+    echo "<br>";
+    echo $details[0];
+    echo $details->Array;
+    echo "<br>";
     echo "<br>";
     echo gettype($details);
+    echo "<br>";
     echo gettype($hmaps_request);
+    foreach($details["drinks"]["idDrink"] as $value){
+        echo $value . "<br>";
+    }
+    echo $details["drinks"]['idDrink'];
 
 ?>
 
