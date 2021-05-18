@@ -62,6 +62,7 @@
     echo $arr3['strIngredient14'] . ' - ' . $arr3['strMeasure14'];
     echo '<BR>';
     echo $arr3['strIngredient15'] . ' - ' . $arr3['strMeasure15'];
+    echo '<BR>';
 ?>
 
 <IMG SRC="<?php echo $imglink?>" WIDTH=300>
