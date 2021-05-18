@@ -15,6 +15,15 @@
     </form>
 </div>
 
+<?php
+
+    $hmaps_request = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+    $json = file_get_contents($hmaps_request);
+    $details = json_decode($json, TRUE);
+    var_dump($details);
+
+?>
+
 </body>
 </html>
 
