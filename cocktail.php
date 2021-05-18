@@ -32,6 +32,25 @@
     echo $arr3['strInstructions'];
     echo '<BR>';
     echo '<BR>';
+    var_dump($details);
+
+    
+    echo "<br>";
+    echo "<br>";
+    print_r($details);
+    echo "<br>";
+    echo "<br>";
+    echo $details[0];
+    echo $details->Array;
+    echo "<br>";
+    echo "<br>";
+    echo gettype($details);
+    echo "<br>";
+    echo gettype($hmaps_request);
+    foreach($details["drinks"]["idDrink"] as $value){
+        echo $value . "<br>";
+    }
+    echo $details["drinks"]['idDrink'];
 
 ?>
 
