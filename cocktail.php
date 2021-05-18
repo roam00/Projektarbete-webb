@@ -20,12 +20,18 @@
     $hmaps_request = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
     $json = file_get_contents($hmaps_request);
     $details = json_decode($json, TRUE);
-    var_dump($details);
-    echo "<br>";
-    echo $hmaps_request[0];
-    echo "<br>";
-    echo gettype($details);
-    echo gettype($hmaps_request);
+    $arr2 = $details['drinks'];
+    $arr3 = $arr2[0];
+    echo '<BR>';
+    echo $arr3['strDrink'];
+    echo '<BR>';
+    echo $arr3['strAlcoholic'];
+    echo '<BR>';
+    echo $arr3['strCategory'];
+    echo '<BR>';
+    echo $arr3['strInstructions'];
+    echo '<BR>';
+    echo '<BR>';
 
 ?>
 
