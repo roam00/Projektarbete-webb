@@ -8,13 +8,6 @@
 
 <body>
 
-<div class="box" id="header" >
-    <h1> Random cocktail </h1>
-    <form action="https://www.thecocktaildb.com/api/json/v1/1/random.php">
-    <button type="submit"> Random cocktail </button>
-    </form>
-</div>
-
 <?php
 
     $hmaps_request = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
@@ -23,36 +16,55 @@
     $arr2 = $details['drinks'];
     $arr3 = $arr2[0];
     echo '<BR>';
+    echo 'Drink name: ';
     echo $arr3['strDrink'];
     echo '<BR>';
+    echo 'Alcohol or not: ';
     echo $arr3['strAlcoholic'];
     echo '<BR>';
+    echo 'Drink category: ';
     echo $arr3['strCategory'];
     echo '<BR>';
+    echo 'Glass type: ';
+    echo $arr3['strGlass'];
+    echo '<BR>';
+    echo 'Instructions: ';
     echo $arr3['strInstructions'];
     echo '<BR>';
+    $imglink = $arr3['strDrinkThumb'];
     echo '<BR>';
-    var_dump($details);
-
-    
-    echo "<br>";
-    echo "<br>";
-    print_r($details);
-    echo "<br>";
-    echo "<br>";
-    echo $details[0];
-    echo $details->Array;
-    echo "<br>";
-    echo "<br>";
-    echo gettype($details);
-    echo "<br>";
-    echo gettype($hmaps_request);
-    foreach($details["drinks"]["idDrink"] as $value){
-        echo $value . "<br>";
-    }
-    echo $details["drinks"]['idDrink'];
-
+    echo $arr3['strIngredient1'] . ' - ' . $arr3['strMeasure1'];
+    echo '<BR>';
+    echo $arr3['strIngredient2'] . ' - ' . $arr3['strMeasure2'];
+    echo '<BR>';
+    echo $arr3['strIngredient3'] . ' - ' . $arr3['strMeasure3'];
+    echo '<BR>';
+    echo $arr3['strIngredient4'] . ' - ' . $arr3['strMeasure4'];
+    echo '<BR>';
+    echo $arr3['strIngredient5'] . ' - ' . $arr3['strMeasure5'];
+    echo '<BR>';
+    echo $arr3['strIngredient6'] . ' - ' . $arr3['strMeasure6'];
+    echo '<BR>';
+    echo $arr3['strIngredient7'] . ' - ' . $arr3['strMeasure7'];
+    echo '<BR>';
+    echo $arr3['strIngredient8'] . ' - ' . $arr3['strMeasure8'];
+    echo '<BR>';
+    echo $arr3['strIngredient9'] . ' - ' . $arr3['strMeasure9'];
+    echo '<BR>';
+    echo $arr3['strIngredient10'] . ' - ' . $arr3['strMeasure10'];
+    echo '<BR>';
+    echo $arr3['strIngredient11'] . ' - ' . $arr3['strMeasure11'];
+    echo '<BR>';
+    echo $arr3['strIngredient12'] . ' - ' . $arr3['strMeasure12'];
+    echo '<BR>';
+    echo $arr3['strIngredient13'] . ' - ' . $arr3['strMeasure13'];
+    echo '<BR>';
+    echo $arr3['strIngredient14'] . ' - ' . $arr3['strMeasure14'];
+    echo '<BR>';
+    echo $arr3['strIngredient15'] . ' - ' . $arr3['strMeasure15'];
 ?>
+
+<IMG SRC="<?php echo $imglink?>" WIDTH=300>
 
 </body>
 </html>
