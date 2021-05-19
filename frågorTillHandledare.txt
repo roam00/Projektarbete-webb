@@ -1,4 +1,4 @@
 //Flytta denna fil utanför zippen när vi skickar in koden eller skriv som kommentar i inlämnmingen
 
 * Kan man använda någon API från grupparbetet i sitt egna individuella arbete?
-* 
+* Kan man använda samma kod för samma sorts funktioner i den individuella uppgiften som i gruppuppgiften?
