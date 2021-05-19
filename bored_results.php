@@ -25,7 +25,7 @@
     $details = json_decode($result, TRUE);
     var_dump($details);
     echo '<BR>';
-    echo $result['activity'];
+    echo $details['activity'];
     ?>
     </BODY>
 </HTML>
