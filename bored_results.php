@@ -7,14 +7,24 @@
     <BODY>
     <?PHP
 
-    echo $_GET['type'];
+    $finalurl = "http://www.boredapi.com/api/activity/";
+
+    if ($_GET['type']) {
+        $finalurl = $finalurl . '?type=' . $_GET['type'];
+    }
+    if ($_GET['participants']) {
+        $finalurl = $finalurl . '?participants=' . $_GET['participants'];
+    }
+    if ($_GET['maxprice']) {
+        $finalurl = $finalurl . '?maxprice=' . $_GET['maxprice'];
+    }
+    if ($_GET['maxaccessibility']) {
+        $finalurl = $finalurl . '?maxaccessibility=' . $_GET['maxaccessibility'];
+    }
+    $result = file_get_contents($finalurl);
+    var_dump($result);
     echo '<BR>';
-    echo $_GET['participants'];
-    echo '<BR>';
-    echo $_GET['maxprice'];
-    echo '<BR>';
-    echo $_GET['maxaccessibility'];
-    echo '<BR>';
+    echo $result['activity'];
     ?>
     </BODY>
 </HTML>
