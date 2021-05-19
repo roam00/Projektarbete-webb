@@ -5,7 +5,7 @@
     <META CHARSET="UTF-8">
     </HEAD>
     <BODY>
-        <FORM NAME="bored" METHOD="get" ACTION="http://www.boredapi.com/api/activity/">
+        <FORM NAME="bored" METHOD="get" ACTION="bored_results.php">
             <FIELDSET>
             <LEGEND>Choose activity parameters:</LEGEND>
             <LABEL FOR="type">Activity type:</LABEL>
