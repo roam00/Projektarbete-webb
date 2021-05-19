@@ -23,9 +23,17 @@
     }
     $result = file_get_contents($finalurl);
     $details = json_decode($result, TRUE);
-    var_dump($details);
     echo '<BR>';
-    echo $details['activity'];
+    echo 'activity: ' . $details['activity'];
+    echo '<BR>';
+    echo 'type: ' . $details['type'];
+    echo '<BR>';
+    echo 'participants: ' . $details['participants'];
+    echo '<BR>';
+    echo 'price: ' . $details['price'];
+    echo '<BR>';
+    echo 'accessibility: ' . $details['accessibility'];
+
     ?>
     </BODY>
 </HTML>
