@@ -22,7 +22,8 @@
         $finalurl = $finalurl . '?maxaccessibility=' . $_GET['maxaccessibility'];
     }
     $result = file_get_contents($finalurl);
-    var_dump($result);
+    $details = json_decode($result, TRUE);
+    var_dump($details);
     echo '<BR>';
     echo $result['activity'];
     ?>
