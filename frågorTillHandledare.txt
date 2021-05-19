@@ -2,3 +2,4 @@
 
 * Kan man använda någon API från grupparbetet i sitt egna individuella arbete?
 * Kan man använda samma kod för samma sorts funktioner i den individuella uppgiften som i gruppuppgiften?
+* Krav på refactoring / kodstruktur? (Motsvarar det för individuella arbetet)
