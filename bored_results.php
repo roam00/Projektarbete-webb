@@ -23,7 +23,6 @@
     }
     $result = file_get_contents($finalurl);
     $details = json_decode($result, TRUE);
-    echo '<BR>';
     echo 'activity: ' . $details['activity'];
     echo '<BR>';
     echo 'type: ' . $details['type'];
