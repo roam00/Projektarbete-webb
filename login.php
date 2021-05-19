@@ -6,10 +6,10 @@
     </HEAD>
     <BODY>
 <form action="homepage.php">
-      <label for="uname">Användarnamn:</label>
-      <input type="text" id="username" name="username"><br><br>
-      <label for="password">Lösenord:</label>
-      <input type="text" id="password" name="password"><br><br>
+      <label for="uname"></label>
+      <input type="text" id="username" name="username" placeholder="Användarnamn"><br><br>
+      <label for="password"></label>
+      <input type="text" id="password" name="password" placeholder="Lösenord"><br><br>
      <input type="submit" value="Logga in">
 </form>
     </BODY>
