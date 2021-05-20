@@ -15,12 +15,6 @@
     if ($_GET['participants']) {
         $finalurl = $finalurl . '?participants=' . $_GET['participants'];
     }
-    if ($_GET['maxprice']) {
-        $finalurl = $finalurl . '?maxprice=' . $_GET['maxprice'];
-    }
-    if ($_GET['maxaccessibility']) {
-        $finalurl = $finalurl . '?maxaccessibility=' . $_GET['maxaccessibility'];
-    }
     $result = file_get_contents($finalurl);
     $details = json_decode($result, TRUE);
     echo 'activity: ' . $details['activity'];
