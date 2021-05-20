@@ -23,7 +23,7 @@ else{
 ?>
 
     <div id="wrapper">
-    <form name="myform" method="post" action="./db/userValidation.php">
+    <form name="myform" method="post" onsubmit = "return validate_form()" action="./db/userValidation.php">
     <label for="username"></label>
     <input type="text" id="username" name="username" placeholder="Namn"><BR>
     <label for="email"></label>
@@ -34,7 +34,7 @@ else{
     <input type="text" id="reppassword" name="reppassword" placeholder="Repetera lösenord">
     <br>
     <br>
-    <input type="submit" value="Registrera dig" onclick=sameValue() id="send">
+    <input type="submit" value="Registrera dig" id="send">
     </form>
     </div>
     <script src="./js/script.js"></script>
