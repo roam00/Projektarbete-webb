@@ -6,7 +6,6 @@
     </HEAD>
     <BODY>
     <?PHP
-
     ?>
     </BODY>
 </HTML>

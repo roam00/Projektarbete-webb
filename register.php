@@ -32,11 +32,12 @@ else{
     <label for="password"></label>
     <input type="text" id="password" name="password" placeholder="Lösenord"><BR>
     <label for="reppassword"></label>
-    <input type="text" id="email" name="reppassword" placeholder="Repetera lösenord">
+    <input type="text" id="reppassword" name="reppassword" placeholder="Repetera lösenord">
     <br>
     <br>
-    <input type="submit" value="Registrera dig" id="send">
+    <input type="submit" value="Registrera dig" onclick=sameValue() id="send">
     </form>
     </div>
+    <script src="./js/script.js"></script>
     </BODY>
 </HTML>
