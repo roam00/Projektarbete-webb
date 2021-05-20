@@ -20,14 +20,19 @@
 </div>
 <br><br>
 
-<button onClick="window.location.reload();">Randomize again</button>
-
 <div class="box" id="header">
-    <h1> Save this combination </h1>
-    <form action="./db/dbCombination.php">
-    <button type="submit"> Save the combination</button>
+    <h1> Create a new combination </h1>
+    <button onClick="window.location.reload();">Create a new combination</button>
     </form>
 </div>
+
+<div class="box" id="header">
+    <h1> Save combination </h1>
+    <form action="./db/dbCombination.php">
+    <button type="submit"> Save combination</button>
+    </form>
+</div>
+
 
 </body>
 
