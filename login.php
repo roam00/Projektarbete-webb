@@ -5,12 +5,13 @@
     <META CHARSET="UTF-8">
     </HEAD>
     <BODY>
-<form action="./db/loginverification.php" method="post" id="formId">
+<form action="./db/loginverification.php" onsubmit="return validate_login()" method="post" id="formId">
       <label for="uname"></label>
       <input type="text" id="username" name="username" placeholder="Användarnamn"><br><br>
       <label for="password"></label>
       <input type="text" id="password" name="password" placeholder="Lösenord"><br><br>
      <input type="submit" value="Logga in">
 </form>
+<script src="./js/script.js"></script>
     </BODY>
 </HTML>

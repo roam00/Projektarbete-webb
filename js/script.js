@@ -1,4 +1,4 @@
-function validate_form(){
+function validate_registration(){
     var x = document.getElementById("username").value;
     var y = document.getElementById("email").value;
     var z = document.getElementById("password").value;
@@ -11,6 +11,16 @@ function validate_form(){
     else{
     return validate_email();
 }
+}
+
+function validate_login(){
+    var x = document.getElementById("username").value;
+    var z = document.getElementById("password").value;
+
+    if (x == "" || z =="" || x.trim() == "" || z.trim() == ""){
+        alert("All fields has to be filled in correctly");
+    	return false;
+	}
 }
 
 function validate_email(){

@@ -23,7 +23,7 @@ else{
 ?>
 
     <div id="wrapper">
-    <form name="myform" method="post" onsubmit = "return validate_form()" action="./db/userValidation.php">
+    <form name="myform" method="post" onsubmit = "return validate_registration()" action="./db/userValidation.php">
     <label for="username"></label>
     <input type="text" id="username" name="username" placeholder="Namn"><BR>
     <label for="email"></label>
