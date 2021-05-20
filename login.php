@@ -5,7 +5,7 @@
     <META CHARSET="UTF-8">
     </HEAD>
     <BODY>
-<form action="homepage.php">
+<form action="./db/loginverification.php" method="post" id="formId">
       <label for="uname"></label>
       <input type="text" id="username" name="username" placeholder="Användarnamn"><br><br>
       <label for="password"></label>

@@ -26,6 +26,16 @@ button {
     transition-duration: 0.4s;
 }
 
+.box {
+    padding: 5px;
+    background-color: rgb(173, 190, 204);
+    float: left;
+    border-style: solid;
+}
+#div1 {
+    max-width: 50%;
+}
+
 button:hover {
     background: rgb(73, 73, 250);
     color: white;

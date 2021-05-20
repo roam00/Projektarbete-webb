@@ -12,8 +12,28 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <div class="box" id="div1">
 <?php getCocktail(); ?>
-<BR><BR>
+</div>
+<div class="box" id="div2">
 <?php getBored(); ?>
+</div>
+<br><br>
+
+<div class="box" id="header">
+    <h1> Create a new combination </h1>
+    <button onClick="window.location.reload();">Create a new combination</button>
+    </form>
+</div>
+
+<div class="box" id="header">
+    <h1> Save combination </h1>
+    <form action="./db/dbCombination.php">
+    <button type="submit"> Save combination</button>
+    </form>
+</div>
+
+
 </body>
+
 </html>
