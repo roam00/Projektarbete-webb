@@ -1,5 +1,5 @@
 <?php
-
+    require 'include/bored_results.php';
     require 'include/cocktail.php';
 
 ?>
@@ -13,5 +13,7 @@
 </head>
 <body>
 <?php getCocktail(); ?>
+<BR><BR>
+<?php getBored(); ?>
 </body>
 </html>
