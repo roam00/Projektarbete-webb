@@ -21,9 +21,8 @@
 <br><br>
 
 <button onClick="window.location.reload();">Randomize again</button>
-
+<BR><BR><BR>
 <div class="box" id="header">
-    <h1> Save this combination </h1>
     <form action="./db/dbCombination.php">
     <button type="submit"> Save the combination</button>
     </form>
