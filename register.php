@@ -5,8 +5,26 @@
     <LINK REL="stylesheet" TYPE="text/css" HREF="./css/style.css">
     </HEAD>
     <BODY>
+
+<?php
+session_start();
+if(isset($_SESSION['username'])){
+    header("Location: index.php");
+}
+else{
+    if(isset($_SESSION['error'])){
+
+        $err = $_SESSION['error'];
+        foreach($err as $value){
+            echo $value . "<br>";
+        }
+    }
+}
+
+?>
+
     <div id="wrapper">
-    <form name="myform" method="post" action="" onsubmit="">
+    <form name="myform" method="post" action="./db/userValidation.php">
     <label for="username"></label>
     <input type="text" id="username" name="username" placeholder="Namn"><BR>
     <label for="email"></label>
