@@ -8,19 +8,40 @@
 
 <body>
 
-<div class="box" id="header">
-    <h1> Registrera dig </h1>
-    <form action="register.php">
-    <button type="submit"> Registrera dig </button>
-    </form>
-</div>
+<?php
 
-<div class="box" id="header">
-    <h1> Logga in </h1>
-    <form action="login.php">
-    <button type="submit"> Logga in</button>
-    </form>
-</div>
+if(isset($_SESSION['username'])){
+    echo $_SESSION['username'];
+
+    echo " Login success";
+
+    echo "<form action='logout.php'>";
+    echo "<button type='submit'> logout</button>";
+    echo "</form>";
+}
+
+?>
+
+<?php
+
+if(!isset($_SESSION['username'])){
+    echo "<div class='box' id='header'>";
+    echo "<h1> Register user </h1>";
+    echo "<form action='register.php'>";
+    echo "<button type='submit'> Register </button>";
+    echo "</form>";
+    echo "</div>";
+
+    echo "<div class='box' id='header'>";
+    echo "<h1> Log in </h1>";
+    echo "<form action='login.php'>";
+    echo "<button type='submit'> Log in</button>";
+    echo "</form>";
+    echo "</div>";
+
+}
+?>
+
 
 <div class="box" id="header">
     <h1> Cocktail </h1>
