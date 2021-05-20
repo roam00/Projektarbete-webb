@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title> Welcome page </title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-
-<body>
-
 <?php
+
+    function getCocktail() {
 
     $hmaps_request = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
     $json = file_get_contents($hmaps_request);
@@ -94,10 +86,10 @@
     echo '<BR>';
     }
     echo '<BR>';
+    echo '<IMG SRC="' . $imglink . '" WIDTH=300>';
+
+    }
 ?>
-
-<IMG SRC="<?php echo $imglink?>" WIDTH=300>
-
 </body>
 </html>
 
