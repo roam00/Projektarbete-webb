@@ -29,8 +29,8 @@ button {
 .box {
     padding: 5px;
     background-color: rgb(173, 190, 204);
-    float: left;
     border-style: solid;
+    float: left;
     width: 600px;
 }
 #div1 {
@@ -42,4 +42,8 @@ button:hover {
     color: white;
 }
 
-
+.header {
+    padding: 5px;
+    background-color: rgb(173, 190, 204);
+    border-style: solid;
+    width: 600px;}
