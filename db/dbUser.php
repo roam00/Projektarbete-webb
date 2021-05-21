@@ -10,7 +10,7 @@ function Search($username, $psw) {
     $row = $result->fetchArray();
     if(sha1($row['salt'] . $psw) == $row['passwordhash']){
         echo "lyckad";
-        header('Location: ../index.php');
+        header('Location: ../homepage.php');
         if(!isset($_SESSION['username'])){
             session_start();
             $_SESSION['username'] = $_POST['username'];
@@ -18,7 +18,7 @@ function Search($username, $psw) {
     }
     else{
         echo "<script>alert('Login failed')</script>";
-        header('Location: ../login.php');
+        header('Location: ./login.php');
     }
 }
 
