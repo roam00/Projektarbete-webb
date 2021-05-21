@@ -1,6 +1,5 @@
 <?php
-    require 'include/bored_results.php';
-    require 'include/cocktail.php';
+    require 'include/api_functions.php';
 
 ?>
 
@@ -32,6 +31,8 @@
     <button type="submit"> Save combination</button>
     </form>
 </div>
+<BR>
+<?php echo $_SESSION['activity']; ?>
 
 
 </body>
