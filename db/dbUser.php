@@ -13,6 +13,7 @@ function Search($username, $psw) {
         header('Location: ../homepage.php');
         if(!isset($_SESSION['username'])){
             session_start();
+            $_SESSION['id'] = $row['userID'];
             $_SESSION['username'] = $_POST['username'];
         }
     }
