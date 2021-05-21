@@ -15,10 +15,11 @@ if(isset($_SESSION['username'])){
     echo $_SESSION['username'];
 
     echo " Login success";
-
+    echo "<div class='box' id='header'>";
     echo "<form action='logout.php'>";
     echo "<button type='submit'> logout</button>";
     echo "</form>";
+    echo "</div>";
 }
 
 ?>
@@ -48,6 +49,13 @@ if(!isset($_SESSION['username'])){
     <h1> Cocktail </h1>
     <form action="cocktail.php">
     <button type="submit"> Cocktail</button>
+    </form>
+</div>
+
+<div class="box" id="header">
+    <h1> Randomize activity </h1>
+    <form action="randomize_activity.php">
+    <button type="submit"> Randomize activity</button>
     </form>
 </div>
 
