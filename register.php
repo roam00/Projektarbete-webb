@@ -25,16 +25,16 @@ else{
     <div id="wrapper">
     <form name="myform" method="post" onsubmit = "return validate_registration()" action="./db/userValidation.php">
     <label for="username"></label>
-    <input type="text" id="username" name="username" placeholder="Namn"><BR>
+    <input type="text" id="username" name="username" placeholder="Username"><BR>
     <label for="email"></label>
-    <input type="text" id="email" name="email" placeholder="E-postadress"><BR>
+    <input type="text" id="email" name="email" placeholder="Email"><BR>
     <label for="password"></label>
-    <input type="text" id="password" name="password" placeholder="Lösenord"><BR>
+    <input type="text" id="password" name="password" placeholder="Password"><BR>
     <label for="reppassword"></label>
-    <input type="text" id="reppassword" name="reppassword" placeholder="Repetera lösenord">
+    <input type="text" id="reppassword" name="reppassword" placeholder="Repeat password">
     <br>
     <br>
-    <input type="submit" value="Registrera dig" id="send">
+    <input type="submit" value="Register account" id="send">
     </form>
     </div>
     <script src="./js/script.js"></script>
