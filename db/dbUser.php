@@ -18,7 +18,7 @@ function Search($username, $psw) {
     }
     else{
         echo "<script>alert('Login failed')</script>";
-        header('Location: ./login.php');
+        header('Location: ../login.php');
     }
 }
 

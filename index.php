@@ -18,8 +18,6 @@ if(isset($_SESSION['username'])){
 
     echo " Login success";
     echo "</h1>";
-    
-    
     echo "<form action='logout.php'>";
     echo "<button type='submit'> logout</button>";
     echo "</form>";
