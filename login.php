@@ -5,6 +5,10 @@
     <META CHARSET="UTF-8">
     </HEAD>
     <BODY>
+
+    <!-- används för att skriva ut errormdeelaenaden från javascript-->
+    <div id="error"></div>
+
 <form action="./db/loginverification.php" onsubmit="return validate_login()" method="post" id="formId">
       <label for="uname"></label>
       <input type="text" id="username" name="username" placeholder="Användarnamn"><br><br>
