@@ -32,8 +32,6 @@
     </form>
 </div>
 <BR>
-<?php echo $_SESSION['activity']; ?>
-
 
 </body>
 

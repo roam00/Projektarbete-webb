@@ -88,6 +88,44 @@
     echo '<BR>';
     echo '<IMG SRC="' . $imglink . '" WIDTH=300>';
 
+    $_SESSION['strDrink'] = $arr3['strDrink'];
+    $_SESSION['strAlcoholic'] = $arr3['strAlcoholic'];
+    $_SESSION['strCategory'] = $arr3['strCategory'];
+    $_SESSION['strGlass'] = $arr3['strGlass'];
+    $_SESSION['strInstructions'] = $arr3['strInstructions'];
+    $_SESSION['strDrinkThumb'] = $arr3['strDrinkThumb'];
+    $_SESSION['strIngredient1'] = $arr3['strIngredient1'];
+    $_SESSION['strMeasure1'] = $arr3['strMeasure1'];
+    $_SESSION['strIngredient2'] = $arr3['strIngredient2'];
+    $_SESSION['strMeasure2'] = $arr3['strMeasure2'];
+    $_SESSION['strIngredient3'] = $arr3['strIngredient3'];
+    $_SESSION['strMeasure3'] = $arr3['strMeasure3'];
+    $_SESSION['strIngredient4'] = $arr3['strIngredient4'];
+    $_SESSION['strMeasure4'] = $arr3['strMeasure4'];
+    $_SESSION['strIngredient5'] = $arr3['strIngredient5'];
+    $_SESSION['strMeasure5'] = $arr3['strMeasure5'];
+    $_SESSION['strIngredient6'] = $arr3['strIngredient6'];
+    $_SESSION['strMeasure6'] = $arr3['strMeasure6'];
+    $_SESSION['strIngredient7'] = $arr3['strIngredient7'];
+    $_SESSION['strMeasure7'] = $arr3['strMeasure7'];
+    $_SESSION['strIngredient8'] = $arr3['strIngredient8'];
+    $_SESSION['strMeasure8'] = $arr3['strMeasure8'];
+    $_SESSION['strIngredient9'] = $arr3['strIngredient9'];
+    $_SESSION['strMeasure9'] = $arr3['strMeasure9'];
+    $_SESSION['strIngredient10'] = $arr3['strIngredient10'];
+    $_SESSION['strMeasure10'] = $arr3['strMeasure10'];
+    $_SESSION['strIngredient11'] = $arr3['strIngredient11'];
+    $_SESSION['strMeasure11'] = $arr3['strMeasure11'];
+    $_SESSION['strIngredient12'] = $arr3['strIngredient12'];
+    $_SESSION['strMeasure12'] = $arr3['strMeasure12'];
+    $_SESSION['strIngredient13'] = $arr3['strIngredient13'];
+    $_SESSION['strMeasure13'] = $arr3['strMeasure13'];
+    $_SESSION['strIngredient14'] = $arr3['strIngredient14'];
+    $_SESSION['strMeasure14'] = $arr3['strMeasure14'];
+    $_SESSION['strIngredient15'] = $arr3['strIngredient15'];
+    $_SESSION['strMeasure15'] = $arr3['strMeasure15'];
+
+
     }
 
     function getBored() {
