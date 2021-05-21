@@ -18,6 +18,9 @@
         echo '<BR>';
         echo 'participants: ' . $details['participants'];
         echo '<BR>';
+        $_SESSION['activity'] = $details['activity'];
+        $_SESSION['type'] = $details['type'];
+        $_SESSION['participants'] = $details['participants'];
 
     }
 

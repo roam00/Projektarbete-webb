@@ -32,6 +32,8 @@
     <button type="submit"> Save combination</button>
     </form>
 </div>
+<BR>
+<?php echo $_SESSION['activity']; ?>
 
 
 </body>
