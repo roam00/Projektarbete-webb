@@ -1,6 +1,5 @@
 <?php
-    require 'include/bored_results.php';
-    require 'include/cocktail.php';
+    require 'include/api_functions.php';
 
 ?>
 
