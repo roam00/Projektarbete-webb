@@ -48,7 +48,7 @@ function addCombinationToDatabase() {
     $stmt->bindParam(':meas15', $_SESSION['strMeasure15'], SQLITE3_TEXT);
     $stmt->bindParam(':imglink', $_SESSION['strDrinkThumb'], SQLITE3_TEXT);
     $stmt->bindParam(':userID', $_SESSION['kek'], SQLITE3_TEXT);
-
+    // Stefan håller på, den här filen är inte klar, 210521 16:42
 
     if ($stmt->execute()) {
         $db->close();
