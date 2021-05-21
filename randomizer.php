@@ -20,13 +20,13 @@
 </div>
 <br><br>
 
-<div class="box" id="header">
+<div class="box">
     <h1> Create a new combination </h1>
     <button onClick="window.location.reload();">Create a new combination</button>
     </form>
 </div>
 
-<div class="box" id="header">
+<div class="box">
     <h1> Save combination </h1>
     <form action="./db/dbCombination.php">
     <button type="submit"> Save combination</button>

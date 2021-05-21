@@ -31,9 +31,10 @@ button {
     background-color: rgb(173, 190, 204);
     float: left;
     border-style: solid;
+    width: 600px;
 }
 #div1 {
-    max-width: 50%;
+    max-width: 500px;
 }
 
 button:hover {
