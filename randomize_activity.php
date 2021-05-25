@@ -1,12 +1,26 @@
+<?php
+session_start();
+if(!(isset($_SESSION['username']))){
+    
+    header('Location: login.php');
+    
+    die();
+    echo "You have to log in to access that page";
+}
+
+?>
+
 <!DOCTYPE HTML>
 <HTML>
-    <HEAD>
+
+<HEAD>
     <LINK REL="stylesheet" TYPE="text/css" HREF="./css/style.css">
     <META CHARSET="UTF-8">
-    </HEAD>
-    <BODY>
-        <FORM NAME="bored" METHOD="get" ACTION="randomizer.php">
-            <FIELDSET>
+</HEAD>
+
+<BODY>
+    <FORM NAME="bored" METHOD="get" ACTION="randomizer.php">
+        <FIELDSET>
             <LEGEND>Choose activity parameters:</LEGEND>
             <LABEL FOR="type">Activity type:</LABEL>
             <SELECT ID="type" NAME="type">
@@ -32,7 +46,8 @@
             </SELECT>
             <BR>
             <INPUT TYPE="submit" VALUE="Skicka!">
-            </FIELDSET>
-        </FORM>            
-    </BODY>
+        </FIELDSET>
+    </FORM>
+</BODY>
+
 </HTML>
