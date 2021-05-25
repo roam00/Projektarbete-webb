@@ -19,6 +19,10 @@ if(!(isset($_SESSION['username']))){
 </HEAD>
 
 <BODY>
+    <?php 
+include "header.php";
+?>
+
     <FORM NAME="bored" METHOD="get" ACTION="randomizer.php">
         <FIELDSET>
             <LEGEND>Choose activity parameters:</LEGEND>

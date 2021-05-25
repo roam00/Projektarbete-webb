@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -7,9 +8,12 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
+<body>
+
 <?php
 include "header.php";
 ?>
 
+</body>
 
 </html>
