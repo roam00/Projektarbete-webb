@@ -27,7 +27,6 @@
     </form>
 </div>
 
-    <?PHP
-    ?>
+
     </BODY>
 </HTML>
