@@ -1,5 +1,6 @@
 <?php
     require 'include/api_functions.php';
+    session_start();
 
 ?>
 
@@ -27,7 +28,7 @@
 
 <div class="box">
     <h1> Save combination </h1>
-    <form action="./db/dbCombination.php">
+    <form action="./db/dbCombination.php" METHOD="POST">
     <button type="submit"> Save combination</button>
     </form>
 </div>

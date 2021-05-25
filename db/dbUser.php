@@ -14,6 +14,7 @@ function Search($username, $psw) {
         if(!isset($_SESSION['username'])){
             session_start();
             $_SESSION['username'] = $_POST['username'];
+            $_SESSION['id'] = $row['userID'];
         }
     }
     else{
