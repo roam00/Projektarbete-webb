@@ -29,9 +29,9 @@ else{
     <label for="email"></label>
     <input type="text" id="email" name="email" placeholder="Email"><BR>
     <label for="password"></label>
-    <input type="text" id="password" name="password" placeholder="Password"><BR>
+    <input type="password" id="password" name="password" placeholder="Password"><BR>
     <label for="reppassword"></label>
-    <input type="text" id="reppassword" name="reppassword" placeholder="Repeat password">
+    <input type="password" id="reppassword" name="reppassword" placeholder="Repeat password">
     <br>
     <br>
     <input type="submit" value="Register account" id="send">

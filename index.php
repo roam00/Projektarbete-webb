@@ -10,8 +10,12 @@
 
 <body>
 
+    <?php
+include "HTML/header.php";
+?>
+
 <?php
-include "header.php";
+include "HTML/footer.php";
 ?>
 
 </body>
