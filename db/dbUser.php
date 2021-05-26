@@ -62,14 +62,16 @@ function AddComment($salt){
     $username = $_POST['username'];
     $email = $_POST['email'];    
     $passwordhash = sha1 ($salt . $password);
+    $userType = 0;
 
     $db = new SQLite3("database.db");
-    $sql = "INSERT INTO 'User' ('username', 'email', 'passwordhash', 'salt') VALUES (:username, :email, :passwordhash, :salt)";
+    $sql = "INSERT INTO 'User' ('username', 'email', 'passwordhash', 'salt', 'userType') VALUES (:username, :email, :passwordhash, :salt, :userType)";
     $stmt = $db->prepare($sql);
     $stmt->bindParam(':username', $username, SQLITE3_TEXT); 
     $stmt->bindParam(':email', $email, SQLITE3_TEXT);
     $stmt->bindParam(':passwordhash', $passwordhash, SQLITE3_TEXT);
     $stmt->bindParam(':salt', $salt, SQLITE3_TEXT);
+    $stmt->bindParam(':userType', $userType, SQLITE3_TEXT);
 
     if($stmt->execute()){
         $db->close();
