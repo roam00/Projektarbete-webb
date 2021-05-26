@@ -169,7 +169,12 @@
                 echo '<BR>';
                 echo 'participants: ' . $row['participants'];
                 echo '<BR><BR>';
-                echo 
+                echo 'Drink name: ' . $rowc['name'];
+                echo '<BR>';
+                echo 'Alcoholic content: ' . $rowc['alcohol'];
+                echo '<BR>';
+                echo '<BR><BR><BR>';
+
                 $i++;
             }
             
