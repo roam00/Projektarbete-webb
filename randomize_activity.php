@@ -20,7 +20,7 @@ if(!(isset($_SESSION['username']))){
 
 <BODY>
     <?php 
-include "header.php";
+include "HTML/header.php";
 ?>
 
     <FORM NAME="bored" METHOD="get" ACTION="randomizer.php">
@@ -52,6 +52,11 @@ include "header.php";
             <INPUT TYPE="submit" VALUE="Skicka!">
         </FIELDSET>
     </FORM>
+
+    <?php 
+include "HTML/footer.php";
+?>
+   
 </BODY>
 
 </HTML>
