@@ -103,4 +103,15 @@ $db->close();
 
 }
 
+
+
+function updateUserType($userID, $userType) {
+    $db = new SQLite3("database.db");
+    $sql = $db->prepare("UPDATE 'User' SET userType = :userType WHERE userID = :userID");
+    $sql->bindParam(':userID', $userID, SQLITE3_TEXT);
+    $sql->bindParam(':userType', $userType, SQLITE3_TEXT);
+    $sql->execute();
+}
+
+  
 ?>
