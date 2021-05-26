@@ -105,7 +105,7 @@ $db->close();
 
 
 
-function updateUserType($userID, $userType) {
+function UpdateUserType($userID, $userType) {
     $db = new SQLite3("database.db");
     $sql = $db->prepare("UPDATE 'User' SET userType = :userType WHERE userID = :userID");
     $sql->bindParam(':userID', $userID, SQLITE3_TEXT);
@@ -113,5 +113,21 @@ function updateUserType($userID, $userType) {
     $sql->execute();
 }
 
+function FindUser($username) {
+    $db = new SQLite3("database.db");
+    $stmt = $db->prepare("SELECT * FROM 'User' WHERE username = :username");
+    $stmt->bindParam(':username', $username, SQLITE3_TEXT);
+    $result = $stmt->execute();
   
+
+    while ($row = $result->fetchArray())
+{
+    echo $row['userID']['username'];
+    
+}
+   
+
+
+
+
 ?>

@@ -9,16 +9,19 @@
 </head>
 
 <body>
-   
 
     <?php
 include "HTML/header.php";
 ?>
 
-<h1> Hi <?php echo $_SESSION['username']; ?> </h1>
+    <h1> Hi <?php echo $_SESSION['username']; ?> </h1>
 
+    <?php
+    include "dbUser.db";
+    FindUser("hampus");
+    ?>
 
-<?php
+    <?php
 include "HTML/footer.php";
 ?>
 
