@@ -151,6 +151,40 @@
 
     }
 
+
+    function latest10() {
+        $db = new SQLite3("./db/database.db");
+        $sql = $db->prepare("SELECT * FROM 'Bored' ORDER BY boredID DESC");
+        $result = $sql->execute();
+        $i = 0;
+        while ($row = $result->fetchArray()) {
+            if ($i < 10) {
+                $sqlc = $db->prepare("SELECT * FROM 'Cocktail' WHERE cocktailID = :cocktailID");
+                $sqlc->bindParam(':cocktailID', $row['boredID'], SQLITE3_TEXT);
+                $resultc = $sqlc->execute();
+                $rowc = $resultc->fetchArray();
+                echo 'activity: ' . $row['activity'];
+                echo '<BR>';
+                echo 'type: ' . $row['type'];
+                echo '<BR>';
+                echo 'participants: ' . $row['participants'];
+                echo '<BR><BR>';
+                echo 
+                $i++;
+            }
+            
+
+        }
+        
+        $db->close();
+
+    }
+
+
+
+
+
+
     function addCombinationToDatabase() {
 
         $dbcocktail = new SQLite3("./database.db");
