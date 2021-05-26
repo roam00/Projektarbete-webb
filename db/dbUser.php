@@ -10,7 +10,7 @@ function Search($username, $psw) {
     $row = $result->fetchArray();
     if(sha1($row['salt'] . $psw) == $row['passwordhash']){
         echo "lyckad";
-        header('Location: ../homepage.php');
+        header('Location: ../index.php');
         if(!isset($_SESSION['username'])){
             session_start();
             $_SESSION['username'] = $_POST['username'];
