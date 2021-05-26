@@ -184,7 +184,7 @@
                     echo $rowc['ingr01'] . ' - ' . $rowc['meas01'];
                     echo '<BR>';
                 }
-                if ($rowc['ingr021']) {
+                if ($rowc['ingr02']) {
                     echo $rowc['ingr02'] . ' - ' . $rowc['meas02'];
                     echo '<BR>';
                 }
