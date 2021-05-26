@@ -1,12 +1,12 @@
 # Projektarbete-webb
 
 * Konstruera databas (startad)
-* Index-sida
-* Registreringsfunktion
-* Inloggningsfunktion
-* Fungerande kontakt med två API:er
-* Slumpa aktivitet
-* Skapa aktivitet
+* Index-sida (klar)
+* Registreringsfunktion (mer testning av valideringen behövs)
+* Inloggningsfunktion (klar)
+* Fungerande kontakt med två API:er (startad)
+* Slumpa aktivitet (klar)
+* Skapa aktivitet 
 * Recensionsmöjlighet(?)
 * Topplista(?)
 * Sök-/filtreringsfunktion!
