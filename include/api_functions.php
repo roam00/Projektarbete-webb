@@ -163,17 +163,87 @@
                 $sqlc->bindParam(':cocktailID', $row['boredID'], SQLITE3_TEXT);
                 $resultc = $sqlc->execute();
                 $rowc = $resultc->fetchArray();
-                echo 'activity: ' . $row['activity'];
+                echo 'Activity: ' . $row['activity'];
                 echo '<BR>';
-                echo 'type: ' . $row['type'];
+                echo 'Type: ' . $row['type'];
                 echo '<BR>';
-                echo 'participants: ' . $row['participants'];
+                echo 'Participants: ' . $row['participants'];
                 echo '<BR><BR>';
                 echo 'Drink name: ' . $rowc['name'];
                 echo '<BR>';
                 echo 'Alcoholic content: ' . $rowc['alcohol'];
                 echo '<BR>';
-                echo '<BR><BR><BR>';
+                echo 'Category: ' . $rowc['category'];
+                echo '<BR>';
+                echo 'Glass: ' . $rowc['glass'];
+                echo '<BR>';
+                echo 'Instructions: ' . $rowc['instructions'];
+                echo '<BR><BR>';
+
+                if ($rowc['ingr01']) {
+                    echo $rowc['ingr01'] . ' - ' . $rowc['meas01'];
+                    echo '<BR>';
+                }
+                if ($rowc['ingr021']) {
+                    echo $rowc['ingr02'] . ' - ' . $rowc['meas02'];
+                    echo '<BR>';
+                }
+                if ($rowc['ingr03']) {
+                    echo $rowc['ingr03'] . ' - ' . $rowc['meas03'];
+                    echo '<BR>';
+                }
+                if ($rowc['ingr04']) {
+                    echo $rowc['ingr04'] . ' - ' . $rowc['meas04'];
+                    echo '<BR>';
+                }
+                if ($rowc['ingr05']) {
+                    echo $rowc['ingr05'] . ' - ' . $rowc['meas05'];
+                    echo '<BR>';
+                }
+                if ($rowc['ingr06']) {
+                    echo $rowc['ingr06'] . ' - ' . $rowc['meas06'];
+                    echo '<BR>';
+                }
+                if ($rowc['ingr07']) {
+                    echo $rowc['ingr07'] . ' - ' . $rowc['meas07'];
+                    echo '<BR>';
+                }
+                if ($rowc['ingr08']) {
+                    echo $rowc['ingr08'] . ' - ' . $rowc['meas08'];
+                    echo '<BR>';
+                }
+                if ($rowc['ingr09']) {
+                    echo $rowc['ingr09'] . ' - ' . $rowc['meas09'];
+                    echo '<BR>';
+                }
+                if ($rowc['ingr10']) {
+                    echo $rowc['ingr10'] . ' - ' . $rowc['meas10'];
+                    echo '<BR>';
+                }
+                if ($rowc['ingr11']) {
+                    echo $rowc['ingr11'] . ' - ' . $rowc['meas11'];
+                    echo '<BR>';
+                }
+                if ($rowc['ingr12']) {
+                    echo $rowc['ingr12'] . ' - ' . $rowc['meas12'];
+                    echo '<BR>';
+                }
+                if ($rowc['ingr13']) {
+                    echo $rowc['ingr13'] . ' - ' . $rowc['meas13'];
+                    echo '<BR>';
+                }
+                if ($rowc['ingr14']) {
+                    echo $rowc['ingr14'] . ' - ' . $rowc['meas14'];
+                    echo '<BR>';
+                }
+                if ($rowc['ingr15']) {
+                    echo $rowc['ingr15'] . ' - ' . $rowc['meas15'];
+                    echo '<BR>';
+                }
+
+                echo '<IMG SRC="' . $rowc['imglink'] . '" WIDTH=300>';
+
+                echo '<BR><BR><BR><BR>';
 
                 $i++;
             }
