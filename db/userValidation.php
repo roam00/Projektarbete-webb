@@ -32,7 +32,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         session_start();
         unset($_SESSION['error']);
         $_SESSION['username'] = $_POST['username'];
-        $_SESSION['userType'] = 0;
         AddComment(SaltGeneration());
     }
     else{
