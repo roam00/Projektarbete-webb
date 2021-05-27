@@ -104,7 +104,7 @@ $db->close();
 }
 
 
-
+/*
 function UpdateUserType($userID, $userType) {
     $db = new SQLite3("database.db");
     $sql = $db->prepare("UPDATE 'User' SET userType = :userType WHERE userID = :userID");
@@ -125,7 +125,7 @@ function FindUser($username) {
     echo $row['userID']['username'];
     
 }
-   
+   */
 
 
 
