@@ -1,11 +1,16 @@
 <?php
 
+header("Location: ../adminPage.php");
+
 include "dbUser.php";
 
-echo "UserID: " . $_POST['userID'] . "";
-echo "Username: " . FindUsernameByUserID($_POST['userID']) . "";
-echo "Current userType: " . FindUserTypeByUserId($_POST['userID']) . "";
+if(isset($_POST['changeToUser-userID'])){
+    ChangeToUser($_POST['changeToUser-userID']);
+}
 
+if(isset($_POST['changeToAdmin-userID'])){
+    ChangeToAdmin($_POST['changeToAdmin-userID']);
+}
 
 
 

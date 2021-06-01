@@ -89,3 +89,19 @@ li a:hover {
     color: white;
     text-align: center;
 }
+
+
+.showDiv {
+    background-color: rgb(192, 192, 192);
+    width: 600px;
+    position: sticky;
+    left: 30%;
+}
+
+.textDiv {
+    background-color: lightgrey;
+    width: 600px;
+    padding: 40px 30px;
+    position: sticky;
+    left: 30%;
+}

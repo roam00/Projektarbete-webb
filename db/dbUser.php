@@ -160,16 +160,18 @@ $result = $db->query("SELECT userID, username, userType FROM 'User' ORDER BY use
     
 while ($row = $result->fetchArray())
 {
+    echo "<div class='textDiv'>";
     echo "<h4>" . "  UserID: " . $row['userID'] . "  Username: " . $row['username'] . "  userType: " . $row['userType'] . "</h4>" ;
-    echo "<form action='changeUserType.php' method='post'>";
+    echo "<form action='db/changeUserType.php' method='post'>";
     if($row['userType'] == 1) {
-        echo "<button name='changeToUser' type='submit' value=" . $row['userID'] . ">Change to normal user </button> "; 
+        echo "<button name='changeToUser-userID' type='submit' value=" . $row['userID'] . ">Change to normal user </button> "; 
     
     }
     else {
-        echo "<button name='changeToAdmin' type='submit' value=" . $row['userID'] . ">Change to admin </button> ";
+        echo "<button name='changeToAdmin-userID' type='submit' value=" . $row['userID'] . ">Change to admin </button> ";
     }
     echo "</form>";
+    echo "</div>";
         
     echo "<br><br><br><br>";
     
@@ -180,43 +182,31 @@ $db->close();
 
 function ChangeToAdmin($userID) {
     
-            $db = new SQLite3("database.db");
-            $sql = "UPDATE 'User' SET username = :newUsername WHERE userID = :userID";
-            $stmt = $db->prepare($sql);
-            $stmt->bindParam(':userType', '1', SQLITE3_TEXT);
-            $stmt->bindParam(':userID', $userID, SQLITE3_INTEGER);
-            $stmt->execute();
-            $db->close();
+    $a = '1';
+    $db = new SQLite3("database.db");
+    $sql = "UPDATE 'User' SET userType = :userType WHERE userID = :userID";
+    $stmt = $db->prepare($sql);
+    $stmt->bindParam(':userType', $a, SQLITE3_INTEGER);
+    $stmt->bindParam(':userID', $userID, SQLITE3_INTEGER);
+    $stmt->execute();
+    $db->close();
             
-    }
+
 
 }
 
 function ChangeToUser($userID) {
-    
+
+     $a = '0';
     $db = new SQLite3("database.db");
-    $sql = "UPDATE 'User' SET username = :newUsername WHERE userID = :userID";
+    $sql = "UPDATE 'User' SET userType = :userType WHERE userID = :userID";
     $stmt = $db->prepare($sql);
-    $stmt->bindParam(':userType', '0', SQLITE3_TEXT);
+    $stmt->bindParam(':userType', $a, SQLITE3_INTEGER);
     $stmt->bindParam(':userID', $userID, SQLITE3_INTEGER);
     $stmt->execute();
     $db->close();
     
 }
-
-}
-
-/*
-function UpdateUserType($userID, $userType) {
-    $db = new SQLite3("database.db");
-    $sql = $db->prepare("UPDATE 'User' SET userType = :userType WHERE userID = :userID");
-    $sql->bindParam(':userID', $userID, SQLITE3_TEXT);
-    $sql->bindParam(':userType', $userType, SQLITE3_TEXT);
-    $sql->execute();
-}
-
-
-   */
 
 
 

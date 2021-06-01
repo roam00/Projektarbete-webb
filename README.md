@@ -20,6 +20,9 @@
 * ER-Diagram
 * Tabellbeskrivning
 
+
+
 kom ihåg:
 * javascript defer
-*
+* göra så att session[usertype ] blir uppdaterad om man ändrar behörighet på sig själv
+* 
