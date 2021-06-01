@@ -265,10 +265,10 @@
         $dbcocktail = new SQLite3("./database.db");
         $sqlc = "INSERT INTO 'Cocktail' ('name', 'alcohol', 'category', 'glass', 'instructions', 'ingr01', 'meas01', 'ingr02', 'meas02', 'ingr03', 
         'meas03', 'ingr04', 'meas04', 'ingr05', 'meas05', 'ingr06', 'meas06', 'ingr07', 'meas07', 'ingr08', 'meas08', 'ingr09', 'meas09', 
-        'ingr10', 'meas10', 'ingr11', 'meas11', 'ingr12', 'meas12', 'ingr13', 'meas13', 'ingr14', 'meas14', 'ingr15', 'meas15', 'imglink', 'userID') 
+        'ingr10', 'meas10', 'ingr11', 'meas11', 'ingr12', 'meas12', 'ingr13', 'meas13', 'ingr14', 'meas14', 'ingr15', 'meas15', 'imglink') 
         VALUES (:name, :alcohol, :category, :glass, :instructions, :ingr01, :meas01, :ingr02, :meas02, :ingr03, :meas03, :ingr04, :meas04, :ingr05, 
         :meas05, :ingr06, :meas06, :ingr07, :meas07, :ingr08, :meas08, :ingr09, :meas09, :ingr10, :meas10, :ingr11, :meas11, :ingr12, :meas12, :ingr13, 
-        :meas13, :ingr14, :meas14, :ingr15, :meas15, :imglink, :userID)";
+        :meas13, :ingr14, :meas14, :ingr15, :meas15, :imglink)";
         $stmtc = $dbcocktail->prepare($sqlc);
         $stmtc->bindParam(':name', $_SESSION['strDrink'], SQLITE3_TEXT);
         $stmtc->bindParam(':alcohol', $_SESSION['strAlcoholic'], SQLITE3_TEXT);
@@ -306,7 +306,6 @@
         $stmtc->bindParam(':ingr15', $_SESSION['strIngredient15'], SQLITE3_TEXT);
         $stmtc->bindParam(':meas15', $_SESSION['strMeasure15'], SQLITE3_TEXT);
         $stmtc->bindParam(':imglink', $_SESSION['strDrinkThumb'], SQLITE3_TEXT);
-        $stmtc->bindParam(':userID', $_SESSION['id'], SQLITE3_TEXT);
         
         if ($stmtc->execute()) {
             $dbcocktail->close();
@@ -317,21 +316,18 @@
         }
         
         $dbbored = new SQLite3("./database.db");
-        $sqlb = "INSERT INTO 'Bored' ('activity', 'type', 'participants', 'userID') VALUES (:activity, :type, :participants, :userID)";
+        $sqlb = "INSERT INTO 'Bored' ('activity', 'type', 'participants') VALUES (:activity, :type, :participants)";
         $stmtb = $dbbored->prepare($sqlb);
         $stmtb->bindParam(':activity', $_SESSION['activity'], SQLITE3_TEXT);
         $stmtb->bindParam(':type', $_SESSION['type'], SQLITE3_TEXT);
         $stmtb->bindParam(':participants', $_SESSION['participants'], SQLITE3_TEXT);
-        $stmtb->bindParam(':userID', $_SESSION['id'], SQLITE3_TEXT);
 
         if ($stmtb->execute()) {
             $dbbored->close();
-            return true;
         }
 
         else {
             $dbbored->close();
-            return false;
         }
 
     }
