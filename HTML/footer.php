@@ -1,5 +1,5 @@
 <div class="footer">
-        <p>Footer</p>
+        <!--<p>Footer</p>-->
         <ul>
         <li><a href="adminpage.php">Adminpage</a></li>
 </ul>

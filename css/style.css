@@ -1,5 +1,5 @@
 body {
-    background: rgb(138, 169, 194);
+    background-image: linear-gradient(to right, rgb(255, 148, 60), rgb(255, 115, 0));
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -22,15 +22,23 @@ input[type=password] {
     border-radius: 8px;
 }
 
-button {
+.button {
     padding: 10px 30px;
     border: none;
-    background-color: steelblue;
+    background-color: rgb(122, 122, 122);
     display: inline-block;
-    color: white;
+    color: rgb(255, 255, 255);
+    font-family:'Courier New', Courier, monospace;
+    font-size: 120%;
     border-radius: 5px;
-    width: 200px;
+    width: 230px;
     transition-duration: 0.4s;
+    position: relative;
+}
+.divider{
+    width:40px;
+    height:auto;
+    display:inline-block;
 }
 
 .box {
@@ -45,13 +53,13 @@ button {
 }
 
 button:hover {
-    background: rgb(73, 73, 250);
-    color: white;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 .header {
     padding: 5px;
-    background-color: rgb(173, 190, 204);
+    background-color: rgba(255, 130, 46, 0);
     border-style: solid;
     width: 600px;
 }
@@ -62,7 +70,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: rgba(255, 130, 46, 0);
 }
 
 li {
@@ -79,17 +87,39 @@ li a {
 li a:hover {
     background-color: #111;;
 }
+.button_box{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 130, 46, 0);
+}
+
+.title_box{ 
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 130, 46, 0); 
+}
+
+text{
+    color: rgb(255, 255, 255);
+    font-size: 800%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #333;
+    background-color: rgba(255, 130, 46, 0);
     color: white;
     text-align: center;
 }
-
 
 .showDiv {
     background-color: rgb(192, 192, 192);
