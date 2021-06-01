@@ -142,6 +142,18 @@ $db->close();
 
 }
 
+function FindUsernameByUserID($userID) {
+    $db = new SQLite3("database.db");
+    $sql = "SELECT * FROM 'User' WHERE userID = :userID";
+    $stmt = $db->prepare($sql);
+    $stmt->bindParam(':userID', $userID, SQLITE3_TEXT);
+    $result = $stmt->execute();
+
+    $row = $result->fetchArray();
+
+    return $row['username'];
+}
+
 function ShowUsers() {
     $db = new SQLite3("db/database.db");
 $result = $db->query("SELECT userID, username, userType FROM 'User' ORDER BY userID");
@@ -149,6 +161,16 @@ $result = $db->query("SELECT userID, username, userType FROM 'User' ORDER BY use
 while ($row = $result->fetchArray())
 {
     echo "<h4>" . "  UserID: " . $row['userID'] . "  Username: " . $row['username'] . "  userType: " . $row['userType'] . "</h4>" ;
+    echo "<form action='changeUserType.php' method='post'>";
+    if($row['userType'] == 1) {
+        echo "<button name='changeToUser' type='submit' value=" . $row['userID'] . ">Change to normal user </button> "; 
+    
+    }
+    else {
+        echo "<button name='changeToAdmin' type='submit' value=" . $row['userID'] . ">Change to admin </button> ";
+    }
+    echo "</form>";
+        
     echo "<br><br><br><br>";
     
 }
@@ -156,6 +178,33 @@ $db->close();
 
 }
 
+function ChangeToAdmin($userID) {
+    
+            $db = new SQLite3("database.db");
+            $sql = "UPDATE 'User' SET username = :newUsername WHERE userID = :userID";
+            $stmt = $db->prepare($sql);
+            $stmt->bindParam(':userType', '1', SQLITE3_TEXT);
+            $stmt->bindParam(':userID', $userID, SQLITE3_INTEGER);
+            $stmt->execute();
+            $db->close();
+            
+    }
+
+}
+
+function ChangeToUser($userID) {
+    
+    $db = new SQLite3("database.db");
+    $sql = "UPDATE 'User' SET username = :newUsername WHERE userID = :userID";
+    $stmt = $db->prepare($sql);
+    $stmt->bindParam(':userType', '0', SQLITE3_TEXT);
+    $stmt->bindParam(':userID', $userID, SQLITE3_INTEGER);
+    $stmt->execute();
+    $db->close();
+    
+}
+
+}
 
 /*
 function UpdateUserType($userID, $userType) {

@@ -23,7 +23,7 @@ if(!($_SESSION['userType'] == 1)){
 
 <body>
     <h1> Hi <?php echo $_SESSION['username']; ?> </h1>
-    <h1> Hi <?php echo $_SESSION['userType']; ?> </h1>
+    <h1> Your userType: <?php echo $_SESSION['userType']; ?> </h1>
     
     <?php
     include "db/showUsers.php";

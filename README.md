@@ -19,3 +19,7 @@
 
 * ER-Diagram
 * Tabellbeskrivning
+
+kom ihåg:
+* javascript defer
+*
