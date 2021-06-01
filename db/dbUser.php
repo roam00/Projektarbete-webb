@@ -24,6 +24,10 @@ function Search($username, $psw) {
     }
 }
 
+function FindUserTypeByUsername($username){
+    
+}
+
 function isUserInDB($username){
     $db = new SQLite3("database.db");
     $stmt = $db->prepare("SELECT * FROM 'User' WHERE username = :username");
