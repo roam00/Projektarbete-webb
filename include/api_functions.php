@@ -335,6 +335,9 @@
         $stmtdatebored = $dbdatebored->prepare($sqldatebored);
         $stmtdatebored->bindParam(':activity', $_SESSION['activity'], SQLITE3_TEXT);
         $resultdatebored = $stmtdatebored->execute();
+        while ($rowdatebored = $resultdatebored->fetchArray()) {
+            echo $rowdatebored['activity'];
+        }
 
         
 
