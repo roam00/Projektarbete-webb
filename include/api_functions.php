@@ -381,4 +381,53 @@
         }
     }
 
+
+    function FindUsernameByUserID($userID) {
+        $db = new SQLite3("db/database.db");
+        $sql = "SELECT * FROM 'User' WHERE userID = :userID";
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(':userID', $userID, SQLITE3_TEXT);
+        $result = $stmt->execute();
+    
+        $row = $result->fetchArray();
+    
+        return $row['username'];
+    }
+
+
+    function ShowDataTable() {
+        $db = new SQLite3("db/database.db");
+        $sqldate = "SELECT Bored.activity, Bored.type, Cocktail.name, Cocktail.imglink, Date.userID, Date.dateMatchID FROM 'Date' JOIN 'Cocktail' ON Date.cocktailID = Cocktail.cocktailID JOIN 'Bored' ON Date.boredID = Bored.boredID ORDER BY Date.cocktailID DESC";
+        $result = $db->query($sqldate);
+
+
+        //$row = $result->fetchArray();
+        
+        //var_dump ($row);
+        //echo "<br><br><br><br>";
+        while($row = $result->fetchArray()) {
+            echo "<div class='resultDiv'>";
+            echo "<div class='boredDiv'>";
+            echo "Activity: " . $row['activity'];
+            echo "<br><br>";
+            echo "Activity type: " . $row['type'];
+            echo "</div>";
+
+            echo "<div class='drinkDiv'>";
+            echo "Cocktail: " . $row['name'];
+            echo "<br><br>";
+            echo '<IMG SRC="' . $row['imglink'] . '" WIDTH=300>';
+            echo "<br><br>";
+            echo "</div>";
+            echo "</div>";
+
+            echo "<div class='bottomDiv'>";
+            echo "Created by: " . FindUsernameByUserID($row['userID']);
+            
+            echo "</div>";
+
+            echo "<br><br><br><br><br><br>";
+        }
+    }
+
 ?>

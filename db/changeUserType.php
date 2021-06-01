@@ -2,7 +2,7 @@
 
 header("Location: ../adminPage.php");
 
-include "dbUser.php";
+include "./dbUser.php";
 
 if(isset($_POST['changeToUser-userID'])){
     ChangeToUser($_POST['changeToUser-userID']);
