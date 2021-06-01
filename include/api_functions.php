@@ -359,6 +359,8 @@
                 $stmtdate->bindParam(':boredID', $rowdatebored['boredID'], SQLITE3_INTEGER);
                 $stmtdate->bindParam(':userID', $_SESSION['id'], SQLITE3_INTEGER);
 
+            }
+            
                 if ($stmtdate->execute()) {
                     echo 'hej';
                     $dbdate->close();
@@ -373,7 +375,7 @@
                     $dbdatebored->close();
                 }
 
-            }
+            
         }
 
         
