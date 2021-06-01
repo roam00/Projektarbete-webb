@@ -335,8 +335,42 @@
         $stmtdatebored = $dbdatebored->prepare($sqldatebored);
         $stmtdatebored->bindParam(':activity', $_SESSION['activity'], SQLITE3_TEXT);
         $resultdatebored = $stmtdatebored->execute();
+
         while ($rowdatebored = $resultdatebored->fetchArray()) {
-            echo $rowdatebored['activity'];
+            $dbdatecocktail = new SQLite3("./database.db");
+            $sqldatecocktail = "SELECT * FROM 'Cocktail' WHERE name LIKE :name";
+            $stmtdatecocktail = $dbdatecocktail->prepare($sqldatecocktail);
+            $stmtdatecocktail->bindParam(':name', $_SESSION['strDrink'], SQLITE3_TEXT);
+            $resultdatecocktail = $stmtdatecocktail->execute();
+
+            while ($rowdatecocktail = $resultdatecocktail->fetchArray()) {
+
+                echo $rowdatecocktail['cocktailID'];
+                echo '<BR>';
+                echo $rowdatebored['boredID'];
+                echo '<BR>';
+                echo $_SESSION['id'];
+                
+                $dbdate = new SQLite3("./database.db");
+                $sqldate = "INSERT INTO 'Date' ('cocktailID', 'boredID', 'userID') VALUES (:cocktailID, :boredID, :userID)";
+                $stmtdate = $dbdate->prepare($sqldate);
+                $stmtdate->bindParam(':cocktailID', $rowdatecocktail['cocktailID'], SQLITE3_TEXT);
+                $stmtdate->bindParam(':boredID', $rowdatebored['boredID'], SQLITE3_TEXT);
+                $stmtdate->bindParam(':userID', $_SESSION['id'], SQLITE3_TEXT);
+
+                if ($stmtdate->execute()) {
+                    $dbdate->close();
+                    $dbdatecocktail->close();
+                    $dbdatebored->close();
+                }
+
+                else {
+                    $dbdate->close();
+                    $dbdatecocktail->close();
+                    $dbdatebored->close();
+                }
+
+            }
         }
 
         
