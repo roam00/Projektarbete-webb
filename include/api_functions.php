@@ -350,43 +350,35 @@
             $resultdatecocktail = $stmtdatecocktail->execute();
 
         }
-            while ($rowdatecocktail = $resultdatecocktail->fetchArray()) {
-
-                echo $rowdatecocktail['cocktailID'];
-                echo '<BR>';
-                echo $_SESSION['boredID'];
-                echo '<BR>';
-                echo $_SESSION['userID'];
-                echo '<BR>';
+        
+        while ($rowdatecocktail = $resultdatecocktail->fetchArray()) {
+            echo $rowdatecocktail['cocktailID'];
+            echo '<BR>';
+            echo $_SESSION['boredID'];
+            echo '<BR>';
+            echo $_SESSION['userID'];
+            echo '<BR>';
                 
-                $dbdate = new SQLite3("./database.db");
-                $sqldate = "INSERT INTO 'Date' ('cocktailID', 'boredID', 'userID') VALUES (:cocktailID, :boredID, :userID)";
-                $stmtdate = $dbdate->prepare($sqldate);
-                $stmtdate->bindParam(':cocktailID', $rowdatecocktail['cocktailID'], SQLITE3_INTEGER);
-                $stmtdate->bindParam(':boredID', $_SESSION['boredID'], SQLITE3_INTEGER);
-                $stmtdate->bindParam(':userID', $_SESSION['userID'], SQLITE3_INTEGER);
-
-            }
-
-                if ($stmtdate->execute()) {
-                    echo 'hej';
-                    $dbdate->close();
-                    $dbdatecocktail->close();
-                    $dbdatebored->close();
-                }
-
-                else {
-                    echo 'nej';
-                    $dbdate->close();
-                    $dbdatecocktail->close();
-                    $dbdatebored->close();
-                }
-
-            
+            $dbdate = new SQLite3("./database.db");
+            $sqldate = "INSERT INTO 'Date' ('cocktailID', 'boredID', 'userID') VALUES (:cocktailID, :boredID, :userID)";
+            $stmtdate = $dbdate->prepare($sqldate);
+            $stmtdate->bindParam(':cocktailID', $rowdatecocktail['cocktailID'], SQLITE3_INTEGER);
+            $stmtdate->bindParam(':boredID', $_SESSION['boredID'], SQLITE3_INTEGER);
+            $stmtdate->bindParam(':userID', $_SESSION['userID'], SQLITE3_INTEGER);
+        }
         
-
-        
-
+        if ($stmtdate->execute()) {
+            echo 'hej';
+            $dbdate->close();
+            $dbdatecocktail->close();
+            $dbdatebored->close();
+        }
+        else {
+            echo 'nej';
+            $dbdate->close();
+            $dbdatecocktail->close();
+            $dbdatebored->close();
+        }
     }
 
 ?>
