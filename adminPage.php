@@ -3,6 +3,7 @@
 session_start();
 if(!($_SESSION['userType'] == 1)){
     
+    echo "<script>alert('You have to be an admin to access that page')</script>";
     header('Location: login.php');
     
     die();
@@ -24,7 +25,10 @@ if(!($_SESSION['userType'] == 1)){
     <h1> Hi <?php echo $_SESSION['username']; ?> </h1>
     <h1> Hi <?php echo $_SESSION['userType']; ?> </h1>
     
+    <?php
+    include "db/showUsers.php";
 
+    ?>
 </body>
 
 </html>

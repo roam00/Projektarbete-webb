@@ -10,7 +10,7 @@ $_SESSION['userID'] = FindIdByUsername($_POST['username']);
 
 $_SESSION['userType'] = FindUserTypeByUserId($_SESSION['userID']);
 
-$_SESSION['email'] = FindEmailByUserId(FindIdByUsername($_POST['username']));
+$_SESSION['email'] = FindEmailByUserId($_SESSION['userID']);
 
 Search($_POST['username'],  $_POST['password']);
 

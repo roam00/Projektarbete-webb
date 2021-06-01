@@ -142,6 +142,20 @@ $db->close();
 
 }
 
+function ShowUsers() {
+    $db = new SQLite3("db/database.db");
+$result = $db->query("SELECT userID, username, userType FROM 'User' ORDER BY userID");
+    
+while ($row = $result->fetchArray())
+{
+    echo "<h4>" . "  UserID: " . $row['userID'] . "  Username: " . $row['username'] . "  userType: " . $row['userType'] . "</h4>" ;
+    echo "<br><br><br><br>";
+    
+}
+$db->close();
+
+}
+
 
 /*
 function UpdateUserType($userID, $userType) {
@@ -152,18 +166,7 @@ function UpdateUserType($userID, $userType) {
     $sql->execute();
 }
 
-function FindUser($username) {
-    $db = new SQLite3("database.db");
-    $stmt = $db->prepare("SELECT * FROM 'User' WHERE username = :username");
-    $stmt->bindParam(':username', $username, SQLITE3_TEXT);
-    $result = $stmt->execute();
-  
 
-    while ($row = $result->fetchArray())
-{
-    echo $row['userID']['username'];
-    
-}
    */
 
 
