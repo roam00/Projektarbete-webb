@@ -349,7 +349,7 @@
                 echo '<BR>';
                 echo $rowdatebored['boredID'];
                 echo '<BR>';
-                echo $_SESSION['id'];
+                echo $_SESSION['userID'];
                 echo '<BR>';
                 
                 $dbdate = new SQLite3("./database.db");
