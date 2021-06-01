@@ -334,6 +334,7 @@
         $sqldatebored = "SELECT * FROM 'Bored' WHERE activity LIKE :activity";
         $stmtdatebored = $dbdatebored->prepare($sqldatebored);
         $stmtdatebored->bindParam(':activity', $_SESSION['activity'], SQLITE3_TEXT);
+        $resultdatebored = $stmtdatebored->execute();
 
         
 
