@@ -23,7 +23,7 @@ include "HTML/header.php";
     </form>
         <div class = 'divider'></div>
     <form action = 'register.php'>
-        <button class= 'button' type = 'submit'>Create account</button>
+        <button class= 'button' type = 'submit'>Register</button>
     </form>
 </div>
 
