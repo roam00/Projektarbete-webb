@@ -350,21 +350,24 @@
                 echo $rowdatebored['boredID'];
                 echo '<BR>';
                 echo $_SESSION['id'];
+                echo '<BR>';
                 
                 $dbdate = new SQLite3("./database.db");
                 $sqldate = "INSERT INTO 'Date' ('cocktailID', 'boredID', 'userID') VALUES (:cocktailID, :boredID, :userID)";
                 $stmtdate = $dbdate->prepare($sqldate);
-                $stmtdate->bindParam(':cocktailID', $rowdatecocktail['cocktailID'], SQLITE3_TEXT);
-                $stmtdate->bindParam(':boredID', $rowdatebored['boredID'], SQLITE3_TEXT);
-                $stmtdate->bindParam(':userID', $_SESSION['id'], SQLITE3_TEXT);
+                $stmtdate->bindParam(':cocktailID', $rowdatecocktail['cocktailID'], SQLITE3_INTEGER);
+                $stmtdate->bindParam(':boredID', $rowdatebored['boredID'], SQLITE3_INTEGER);
+                $stmtdate->bindParam(':userID', $_SESSION['id'], SQLITE3_INTEGER);
 
                 if ($stmtdate->execute()) {
+                    echo 'hej';
                     $dbdate->close();
                     $dbdatecocktail->close();
                     $dbdatebored->close();
                 }
 
                 else {
+                    echo 'nej';
                     $dbdate->close();
                     $dbdatecocktail->close();
                     $dbdatebored->close();
