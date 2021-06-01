@@ -24,9 +24,44 @@ function Search($username, $psw) {
     }
 }
 
-function FindUserTypeByUsername($username){
-    
+function FindUserTypeByUserId($userID){
+    $db = new SQLite3("database.db");
+    $sql = "SELECT * FROM 'User' WHERE userID = :userID";
+    $stmt = $db->prepare($sql);
+    $stmt->bindParam(':userID', $userID, SQLITE3_TEXT);
+    $result = $stmt->execute();
+
+    $row = $result->fetchArray();
+
+    return $row['userType'];
 }
+
+function FindIdByUsername($username){
+    $db = new SQLite3("database.db");
+    $sql = "SELECT * FROM 'User' WHERE username = :username";
+    $stmt = $db->prepare($sql);
+    $stmt->bindParam(':username', $username, SQLITE3_TEXT);
+    $result = $stmt->execute();
+
+    $row = $result->fetchArray();
+
+    return $row['userID'];
+
+}
+
+function FindEmailByUserId($userId){
+    $db = new SQLite3("database.db");
+    $sql = "SELECT * FROM 'User' WHERE userID = :userID";
+    $stmt = $db->prepare($sql);
+    $stmt->bindParam(':userID', $userID, SQLITE3_TEXT);
+    $result = $stmt->execute();
+
+    $row = $result->fetchArray();
+
+    return $row['email'];
+}
+
+
 
 function isUserInDB($username){
     $db = new SQLite3("database.db");
