@@ -25,8 +25,8 @@
 
         <div class = 'divider'></div>
 
-        <form action = 'randomize_activity.php'>
-            <button class= 'buttons' type = 'submit'>Randomize activity</button>
+        <form action = 'search.php'>
+            <button class= 'buttons' type = 'submit'>Search</button>
         </form>
 
         <div class = 'divider'></div>
