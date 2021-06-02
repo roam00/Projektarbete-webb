@@ -9,7 +9,6 @@
         }
         if(isset($_SESSION['username'])){
             echo "<li><a href='showDataTable.php'>See date combinations</a></li>";
-            echo "<li><a href='latest10.php'>Latest 10 </a></li>";
             echo "<li><a href='search.php'>Search</a></li>";
             echo "<li style='float: right;'><a href='profile.php'>My profile</a></li>
             <li style='float: right;'><a href='logout.php'>Log out</a></li>";
