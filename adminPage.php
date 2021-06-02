@@ -1,18 +1,16 @@
 <?php
 
-session_start();
-if(!($_SESSION['userType'] == 1)){
-    
-    echo "<script>alert('You have to be an admin to access that page')</script>";
-    header('Location: login.php');
-    
-    die();
-    echo "You have to log in to access that page";
-}
+    session_start();
+    if(!($_SESSION['userType'] == 1)){
+        
+        echo "<script>alert('You have to be an admin to access that page')</script>";
+        header('Location: login.php');
+        
+        die();
+        echo "You have to log in to access that page";
+    }
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html>
@@ -24,17 +22,14 @@ if(!($_SESSION['userType'] == 1)){
 </head>
 
 <body>
-<?php
-include "HTML/header.php";
-?>
-
+    <?php
+    include "HTML/header.php";
+    ?>
     <h1> Hi <?php echo $_SESSION['username']; ?> </h1>
     <h1> Your userType: <?php echo $_SESSION['userType']; ?> </h1>
     
     <?php
-    include "db/showUsers.php";
-
+        include "db/showUsers.php";
     ?>
 </body>
-
 </html>
