@@ -13,8 +13,10 @@ function Search($username, $psw) {
         if(!isset($_SESSION['username'])){
             session_start();
             $_SESSION['username'] = $_POST['username'];
-            $_SESSION['id'] = $row['userID'];
+            $_SESSION['userID'] = $row['userID'];
             $_SESSION['userType'] = $row['userType'];
+
+            $_SESSION['email'] = $row['email'];
         }
     }
     else{
