@@ -11,7 +11,7 @@
     <?php
 include "HTML/header.php";
 ?>
-
+<div class = 'search_box'>
     <FORM NAME="bored" METHOD="post" ACTION="searchbored.php">
         <FIELDSET>
             <LEGEND>Filter activities:</LEGEND>
@@ -48,10 +48,10 @@ include "HTML/header.php";
                 <OPTION VALUE="Shot">Shot</OPTION>
                 <OPTION VALUE="Soft Drink / Soda">Soft Drink / Soda</OPTION>
             </SELECT>
-            <INPUT TYPE="submit" VALUE="Send!">
+            <button class = 'button8' TYPE="submit" VALUE="Send!">
         </FIELDSET>
     </FORM>
-
+</div>
 
 <?php
 include "HTML/footer.php";

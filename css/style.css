@@ -166,6 +166,37 @@ input[type=password] {
     transform: translate(-50%, -50%);
 }
 
+.button8 {
+    padding: 10px 25px;
+    border: none;
+    background-color: rgb(122, 122, 122);
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20%;
+    text-align: center;
+    border-radius: 5px;
+    width: 20px;
+    transition-duration: 0.4s;
+    margin: 0;
+    position: relative;
+    left: 0%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.search_box {
+        padding: 5px;
+        border: none;
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        top: 28%;
+        left: 38%;
+}
+
 .divider{
     width:40px;
     height:auto;
