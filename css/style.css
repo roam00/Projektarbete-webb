@@ -266,14 +266,14 @@ text{
 }
 
 .showDiv {
-    background-color: rgb(192, 192, 192);
+    background-color: rgba(192, 192, 192, 0);
     width: 600px;
     position: sticky;
     left: 30%;
 }
 
 .textDiv {
-    background-color: lightgrey;
+    background-color: rgba(211, 211, 211, 0);
     width: 600px;
     padding: 40px 30px;
     position: sticky;
@@ -282,13 +282,13 @@ text{
 
 .resultDiv {
     display: flex;
-    background-color: linen;
+    background-color: rgba(250, 240, 230, 0);
     padding: 40px 40px;
 }
 
 .boredDiv {
     flex: 0 0 65%;
-    background-color: linen;
+    background-color: rgba(250, 240, 230, 0);
 }
 
 .cocktailDiv {
@@ -296,11 +296,11 @@ text{
     padding: 40px 40px;
 }
 .bottomDiv {
-    background-color: linen;
+    background-color: rgba(250, 240, 230, 0);
     padding: 40px 40px;
     
 }
 .commentDiv {
-    background-color: linen;
+    background-color: rgba(250, 240, 230, 0);
     padding: 40px 40px;
 }
