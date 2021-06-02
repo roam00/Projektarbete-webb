@@ -151,7 +151,30 @@
 
     }
 
-     function addCombinationToDatabase() {
+    function isCocktailInDatabase {
+
+    }
+
+    function isBoredInDatabase {
+
+    }
+
+    function isEmailInDB($email){
+        $db = new SQLite3("database.db");
+        $stmt = $db->prepare("SELECT * FROM 'User' WHERE email = :email");
+        $stmt->bindParam(':email', $email, SQLITE3_TEXT);
+        $result = $stmt->execute();
+        $row = $result->fetchArray();
+        if($row['email'] == $email){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+
+    function addCombinationToDatabase() {
 
         $dbcocktail = new SQLite3("./database.db");
         $sqlc = "INSERT INTO 'Cocktail' ('name', 'alcohol', 'category', 'glass', 'instructions', 'ingr01', 'meas01', 'ingr02', 'meas02', 'ingr03', 
