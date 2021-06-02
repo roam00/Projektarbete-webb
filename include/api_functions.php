@@ -428,4 +428,40 @@
         }
     }
 
+    function searchBored($type) {
+        echo $_POST['type'];
+        $db = new SQLite3("db/database.db");
+        $sql = "SELECT Bored.activity, Bored.type, Cocktail.name, Cocktail.imglink, Date.userID, Date.dateMatchID FROM 'Date' JOIN 'Cocktail' ON Date.cocktailID = Cocktail.cocktailID JOIN 'Bored' ON Date.boredID = Bored.boredID WHERE Bored.type = :type ORDER BY Date.cocktailID DESC";
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(':type', $type, SQLITE3_TEXT);
+        $result = $stmt->execute();
+        
+        while ($row = $result->fetchArray()) {
+            echo "<div class='resultDiv'>";
+            echo "<div class='boredDiv'>";
+            echo "Activity: " . $row['activity'];
+            echo "<br><br>";
+            echo "Activity type: " . $row['type'];
+            echo "</div>";
+
+            echo "<div class='drinkDiv'>";
+            echo "Cocktail: " . $row['name'];
+            echo "<br><br>";
+            echo '<IMG SRC="' . $row['imglink'] . '" WIDTH=300>';
+            echo "<br><br>";
+            echo "</div>";
+            echo "</div>";
+
+            echo "<div class='bottomDiv'>";
+            echo "Created by: " . FindUsernameByUserID($row['userID']);
+            
+            echo "</div>";
+
+            echo "<br><br><br><br><br><br>";
+        }
+
+
+
+    }
+
 ?>
