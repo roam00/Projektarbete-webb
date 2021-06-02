@@ -19,19 +19,19 @@
                 }
             }
         }
-
+            include "HTML/header.php";
         ?>
         <div class = "log_in_box">
             <form name="myform" method="post" onsubmit = "return validate_registration()" action="./db/userValidation.php">
                 <label for="username"></label>
-                <input class = 'input' type="text" id="username" name="username" placeholder="Username"><BR>
+                <input class = 'input' type="text" id="username" name="username" placeholder="Username"><br><br>
                 <label for="email"></label>
-                <input class = 'input' type="text" id="email" name="email" placeholder="Email"><BR>
+                <input class = 'input' type="text" id="email" name="email" placeholder="Email"><br><br>
                 <label for="password"></label>
-                <input class = 'input' type="password" id="password" name="password" placeholder="Password"><BR>
+                <input class = 'input' type="password" id="password" name="password" placeholder="Password"><br><br>
                 <label for="reppassword"></label>
-                <input class = 'input' type="password" id="reppassword" name="reppassword" placeholder="Repeat password">
-                <button class = 'button' type="submit" value="Register account" id="send">
+                <input class = 'input' type="password" id="reppassword" name="reppassword" placeholder="Repeat password"><br><br>
+                <button class = 'button' type="submit" value="Register account" id="send">Register</button>
             </form>
         </div>
     <script src="./js/script.js"></script>
