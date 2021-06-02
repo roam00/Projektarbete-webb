@@ -208,6 +208,22 @@ li {
     float: left;
 }
 
+.back_button{
+    font-size: 50px;
+    border: none;
+    background-color: rgba(255, 130, 46, 0);
+    color: white;
+    text-align: center;
+    padding: 0px 0px;
+    text-decoration: none;
+}
+
+.back_button:hover{
+    color: #111;;
+    background-color: rgba(255, 130, 46, 0);
+
+}
+
 li a {
     display: block;
     color: white;
@@ -215,8 +231,9 @@ li a {
     padding: 20px 16px;
     text-decoration: none;
 }
+
 li a:hover {
-    background-color: #111;;
+    color: #111;;
 }
 .button_box{
     width: 100%;
