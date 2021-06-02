@@ -19,11 +19,11 @@ include "HTML/header.php";
 
 <div class = "button_box">
     <form action = 'login.php'>
-        <button class= 'button' type = 'submit'>Log in</button>
+        <button class= 'buttons' type = 'submit'>Log in</button>
     </form>
         <div class = 'divider'></div>
     <form action = 'register.php'>
-        <button class= 'button' type = 'submit'>Register</button>
+        <button class= 'buttons' type = 'submit'>Register</button>
     </form>
 </div>
 

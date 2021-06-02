@@ -26,7 +26,7 @@ input[type=password] {
     background-color: hsl(0, 0%, 100%);
 	border: 0px solid rgb(255, 255, 255);
 	padding: 10px 25px;
-	border-radius: 15px;
+	border-radius: 5px;
 	color: rgb(0, 0, 0);
 	font-size: 22px;
 	font-family:'Courier New', Courier, monospace;
@@ -36,8 +36,8 @@ input[type=password] {
   	transform: translate(-50%, -50%);
 }
 
-.button {
-    padding: 10px 30px;
+.buttons {
+    padding: 10px 25px;
     border: none;
     background-color: rgb(122, 122, 122);
     display: inline-block;
@@ -51,6 +51,24 @@ input[type=password] {
     position: relative;
     top: 50%;
     left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.button {
+    padding: 10px 25px;
+    border: none;
+    background-color: rgb(122, 122, 122);
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-family:'Courier New', Courier, monospace;
+    font-size: 120%;
+    border-radius: 5px;
+    width: 150px;
+    transition-duration: 0.4s;
+    margin: 0;
+    position: relative;
+    left: 24.5%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
