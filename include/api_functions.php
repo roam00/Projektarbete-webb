@@ -286,7 +286,7 @@
 
     function ShowDataTable() {
         $db = new SQLite3("db/database.db");
-        $sqldate = "SELECT Bored.activity, Bored.type, Cocktail.name, Cocktail.imglink, Date.userID, Date.dateMatchID, Review.authorUserID, Review.comment FROM 'Date' JOIN 'Cocktail' ON Date.cocktailID = Cocktail.cocktailID JOIN 'Bored' ON Date.boredID = Bored.boredID JOIN 'Review' ON Review.dateMatchID = Date.dateMatchID ORDER BY Date.cocktailID DESC";
+        $sqldate = "SELECT Bored.activity, Bored.type, Cocktail.name, Cocktail.imglink, Date.userID, Date.dateMatchID, Review.authorUserID, Review.comment, Review.date FROM 'Date' JOIN 'Cocktail' ON Date.cocktailID = Cocktail.cocktailID JOIN 'Bored' ON Date.boredID = Bored.boredID LEFT JOIN 'Review' ON Review.dateMatchID = Date.dateMatchID ORDER BY Date.cocktailID DESC";
         $result = $db->query($sqldate);
 
 
@@ -332,40 +332,46 @@
 
     function showRow($row) {
         echo "<div class='resultDiv'>";
-        echo "<div class='boredDiv'>";
-        echo "Activity: " . $row['activity'];
-        echo "<br><br>";
-        echo "Activity type: " . $row['type'];
-        echo "</div>";
+            echo "<div class='boredDiv'>";
+            echo "Activity: " . $row['activity'];
+            echo "<br><br>";
+            echo "Activity type: " . $row['type'];
+            echo "</div>";
 
-        echo "<div class='drinkDiv'>";
-        echo "Cocktail: " . $row['name'];
-        echo "<br><br>";
-        echo '<IMG SRC="' . $row['imglink'] . '" WIDTH=300>';
-        echo "<br><br>";
-        echo "</div>";
-        echo "</div>";
+            echo "<div class='drinkDiv'>";
+            echo "Cocktail: " . $row['name'];
+            echo "<br><br>";
+            echo '<IMG SRC="' . $row['imglink'] . '" WIDTH=300>';
+            echo "<br><br>";
+            echo "</div>";
+            echo "</div>";
 
-       
-        
-        echo "<div class='bottomDiv'>";
-      
-        echo "Created by: " . FindUsernameByUserID($row['userID']);
-        
-        echo "<br><br>";
-        echo "<form action='writeComment.php' method='post'>";
-        echo "<button name='dateID' type='submit' value=" . $row['dateMatchID'] . ">Write a comment </button> "; 
+           
+            
+            echo "<div class='bottomDiv'>";
+          
+            echo "Created by: " . FindUsernameByUserID($row['userID']);
+            
+            echo "<br><br>";
+            echo "<form action='writeComment.php' method='post'>";
+            echo "<button name='dateID' type='submit' value=" . $row['dateMatchID'] . ">Write a comment </button> "; 
+    
+            echo "</div>";
 
-        echo "</div>";
+            echo "<br><br>";
 
-        echo "<br><br><br><br><br><br>";
+            if(isset($row['comment'])) {
+                echo "<div class='commentDiv'>";
+                echo "Comment: " . $row['comment'];
+                echo "<br>";
+                echo "Author: " . FindUsernameByUserID($row['authorUserID']);
+                echo "<br>";
+                echo "Date: " . $row['date'];
+                echo "</div>";
+            }
+            
 
-        
-        echo "<div class='commentDiv'>";
-        echo $row['comment'] . $row['authorUserID'];
-        echo "</div>";
-
-        echo "<br><br><br><br><br><br>";
+            echo "<br><br><br><br><br><br>";
     }
 
 ?>
