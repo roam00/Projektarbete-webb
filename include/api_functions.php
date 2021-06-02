@@ -395,7 +395,7 @@
 
     function ShowDataTable() {
         $db = new SQLite3("db/database.db");
-        $sqldate = "SELECT Bored.activity, Bored.type, Cocktail.name, Cocktail.imglink, Date.userID, Date.dateMatchID, Review.authorUserID, Review.comment FROM 'Date' JOIN 'Cocktail' ON Date.cocktailID = Cocktail.cocktailID JOIN 'Bored' ON Date.boredID = Bored.boredID JOIN 'Review' ON Review.dateMatchID = Date.dateMatchID ORDER BY Date.cocktailID DESC";
+        $sqldate = "SELECT Bored.activity, Bored.type, Cocktail.name, Cocktail.imglink, Date.userID, Date.dateMatchID, Review.authorUserID, Review.comment, Review.date FROM 'Date' JOIN 'Cocktail' ON Date.cocktailID = Cocktail.cocktailID JOIN 'Bored' ON Date.boredID = Bored.boredID LEFT JOIN 'Review' ON Review.dateMatchID = Date.dateMatchID ORDER BY Date.cocktailID DESC";
         $result = $db->query($sqldate);
 
 
@@ -431,12 +431,18 @@
     
             echo "</div>";
 
-            echo "<br><br><br><br><br><br>";
+            echo "<br><br>";
 
+            if(isset($row['comment'])) {
+                echo "<div class='commentDiv'>";
+                echo "Comment: " . $row['comment'];
+                echo "<br>";
+                echo "Author: " . FindUsernameByUserID($row['authorUserID']);
+                echo "<br>";
+                echo "Date: " . $row['date'];
+                echo "</div>";
+            }
             
-            echo "<div class='commentDiv'>";
-            echo $row['comment'] . $row['authorUserID'];
-            echo "</div>";
 
             echo "<br><br><br><br><br><br>";
         }
