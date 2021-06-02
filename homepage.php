@@ -31,10 +31,6 @@
     echo    "</form>";
 
     echo    "<div class = 'divider'></div>";
-
-    echo    "<form action = 'showDataTable.php'>";
-    echo        "<button class= 'buttons' type = 'submit'>Date combinations</button>";
-    echo    "</form>";
     echo "</div>";
         include "HTML/footer.php";
     }
