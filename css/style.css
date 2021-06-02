@@ -47,7 +47,7 @@ input[type=password] {
     border-radius: 5px;
     width: 200px;
     transition-duration: 0.4s;
-    position: relative;
+    position: absolute;
     left: 50%;
     top: 50%;
     -ms-transform: translate(-50%, -50%);
@@ -73,7 +73,7 @@ input[type=password] {
     transform: translate(-50%, -50%);
 }
 
-.button {
+.button1 {
     padding: 10px 25px;
     border: none;
     background-color: rgb(122, 122, 122);
@@ -82,14 +82,108 @@ input[type=password] {
     font-family:'Courier New', Courier, monospace;
     font-size: 120%;
     border-radius: 5px;
-    width: 150px;
+    width: 200px;
     transition-duration: 0.4s;
     margin: 0;
     position: relative;
-    left: 24.5%;
+    left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
+.button2 {
+    padding: 10px 25px;
+    border: none;
+    background-color: rgb(122, 122, 122);
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-family:'Courier New', Courier, monospace;
+    font-size: 120%;
+    border-radius: 5px;
+    width: 200px;
+    transition-duration: 0.4s;
+    margin: 0;
+    position: relative;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.button3 {
+    padding: 10px 25px;
+    border: none;
+    background-color: rgb(122, 122, 122);
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-family:'Courier New', Courier, monospace;
+    font-size: 120%;
+    border-radius: 5px;
+    width: 130px;
+    transition-duration: 0.4s;
+    margin: 0;
+    position: relative;
+    left: 21.5%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.button4 {
+    padding: 20px 25px;
+    border: none;
+    background-color: rgb(122, 122, 122);
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-family:'Courier New', Courier, monospace;
+    font-size: 120%;
+    border-radius: 5px;
+    width: 200px;
+    transition-duration: 0.4s;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.button5 {
+    padding: 20px 25px;
+    border: none;
+    background-color: rgb(122, 122, 122);
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-family:'Courier New', Courier, monospace;
+    font-size: 120%;
+    border-radius: 5px;
+    width: 200px;
+    transition-duration: 0.4s;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.button6 {
+    padding: 31px 25px;
+    border: none;
+    background-color: rgb(122, 122, 122);
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-family:'Courier New', Courier, monospace;
+    font-size: 120%;
+    border-radius: 5px;
+    width: 200px;
+    transition-duration: 0.4s;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
 .divider{
     width:40px;
     height:auto;

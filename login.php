@@ -16,7 +16,7 @@
                 <input class = 'input' type="text" id="username" name="username" placeholder="Username"><br><br>
                 <label for="password"></label>
                 <input class = 'input' type="password" id="password" name="password" placeholder="Password"><br><br>
-                <button class= 'button' type = 'submit'>Log in</button>
+                <button class= 'button3' type = 'submit'>Log in</button>
             </form>
         </div>
         <script src="./js/script.js"></script>

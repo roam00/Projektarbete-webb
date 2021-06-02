@@ -19,11 +19,11 @@
 
     <div class = "button_box">
         <form action = 'login.php'>
-            <button class= 'buttons' type = 'submit'>Log in</button>
+            <button class= 'button1' type = 'submit'>Log in</button>
         </form>
             <div class = 'divider'></div>
         <form action = 'register.php'>
-            <button class= 'buttons' type = 'submit'>Register</button>
+            <button class= 'button2' type = 'submit'>Register</button>
         </form>
     </div>
 
