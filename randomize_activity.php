@@ -49,7 +49,7 @@ include "HTML/header.php";
                 <OPTION VALUE="4">4</OPTION>
             </SELECT>
             <BR>
-            <INPUT TYPE="submit" VALUE="Skicka!">
+            <INPUT TYPE="submit" VALUE="Send!">
         </FIELDSET>
     </FORM>
 

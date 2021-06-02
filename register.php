@@ -21,21 +21,22 @@ else{
 }
 
 ?>
-
-    <div id="wrapper">
+<div id="wrapper">
+<div class = "log_in_box">
     <form name="myform" method="post" onsubmit = "return validate_registration()" action="./db/userValidation.php">
     <label for="username"></label>
-    <input type="text" id="username" name="username" placeholder="Username"><BR>
+    <input class = 'input' type="text" id="username" name="username" placeholder="Username"><BR>
     <label for="email"></label>
-    <input type="text" id="email" name="email" placeholder="Email"><BR>
+    <input class = 'input' type="text" id="email" name="email" placeholder="Email"><BR>
     <label for="password"></label>
-    <input type="password" id="password" name="password" placeholder="Password"><BR>
+    <input class = 'input' type="password" id="password" name="password" placeholder="Password"><BR>
     <label for="reppassword"></label>
-    <input type="password" id="reppassword" name="reppassword" placeholder="Repeat password">
+    <input class = 'input' type="password" id="reppassword" name="reppassword" placeholder="Repeat password">
     <br>
     <br>
-    <input type="submit" value="Register account" id="send">
+    <button class = 'button' type="submit" value="Register account" id="send">
     </form>
+</div>
     </div>
     <script src="./js/script.js"></script>
     </BODY>
