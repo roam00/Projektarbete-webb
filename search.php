@@ -14,7 +14,7 @@ include "HTML/header.php";
 
     <FORM NAME="bored" METHOD="post" ACTION="searchbored.php">
         <FIELDSET>
-            <LEGEND>Search activities:</LEGEND>
+            <LEGEND>Filter activities:</LEGEND>
             <LABEL FOR="type">Activity type:</LABEL>
             <SELECT ID="type" NAME="type">
                 <OPTION VALUE="">-</OPTION>
@@ -34,19 +34,19 @@ include "HTML/header.php";
     <BR><BR>
     <FORM NAME="cocktail" METHOD="post" ACTION="searchcocktail.php">
         <FIELDSET>
-            <LEGEND>Search cocktails:</LEGEND>
-            <LABEL FOR="type">Activity type:</LABEL>
-            <SELECT ID="type" NAME="type">
+            <LEGEND>Filter cocktails:</LEGEND>
+            <LABEL FOR="type">Cocktail type:</LABEL>
+            <SELECT ID="category" NAME="category">
                 <OPTION VALUE="">-</OPTION>
-                <OPTION VALUE="education">Education</OPTION>
-                <OPTION VALUE="recreational">Recreational</OPTION>
-                <OPTION VALUE="social">Social</OPTION>
-                <OPTION VALUE="diy">DIY</OPTION>
-                <OPTION VALUE="charity">Charity</OPTION>
-                <OPTION VALUE="cooking">Cooking</OPTION>
-                <OPTION VALUE="relaxation">Relaxation</OPTION>
-                <OPTION VALUE="music">Music</OPTION>
-                <OPTION VALUE="busywork">Busywork</OPTION>
+                <OPTION VALUE="Beer">Beer</OPTION>
+                <OPTION VALUE="Cocktail">Cocktail</OPTION>
+                <OPTION VALUE="Coffee / Tea">Coffee / Tea</OPTION>
+                <OPTION VALUE="Milk / Float / Shake">Milk / Float / Shake</OPTION>
+                <OPTION VALUE="Ordinary Drink">Ordinary Drink</OPTION>
+                <OPTION VALUE="Other/Unknown">Other/Unknown</OPTION>
+                <OPTION VALUE="Punch / Party Drink">Punch / Party Drink</OPTION>
+                <OPTION VALUE="Shot">Shot</OPTION>
+                <OPTION VALUE="Soft Drink / Soda">Soft Drink / Soda</OPTION>
             </SELECT>
             <INPUT TYPE="submit" VALUE="Send!">
         </FIELDSET>

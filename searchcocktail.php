@@ -13,7 +13,7 @@ include "HTML/header.php";
 require "include/api_functions.php";
 
 
-searchCocktail($_POST['type']);
+searchCocktail($_POST['category']);
 
 
 
