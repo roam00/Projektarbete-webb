@@ -12,6 +12,8 @@ if(!($_SESSION['userType'] == 1)){
 
 ?>
 
+
+
 <!DOCTYPE html>
 <html>
 
@@ -22,6 +24,10 @@ if(!($_SESSION['userType'] == 1)){
 </head>
 
 <body>
+<?php
+include "HTML/header.php";
+?>
+
     <h1> Hi <?php echo $_SESSION['username']; ?> </h1>
     <h1> Your userType: <?php echo $_SESSION['userType']; ?> </h1>
     
