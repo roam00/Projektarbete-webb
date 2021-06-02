@@ -10,8 +10,8 @@
 
 <body>
     <?php
-include "HTML/header.php";
-?>
+        include "HTML/header.php";
+    ?>
 
 <div class = "title_box"> 
     <text><br>aMatch</text>  
