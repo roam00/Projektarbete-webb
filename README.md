@@ -28,3 +28,6 @@ kom ihåg:
 * kunna klicka vidare från showDateTable för att se mer info
 * javascript login
 * förhindra duplikering av cocktails och bored
+* lägga till footer där det står upphovsman
+* dokumentation förklara cocktaildatabas-lösningen
+*
