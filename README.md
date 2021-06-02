@@ -26,4 +26,4 @@ kom ihåg:
 * javascript defer
 * göra så att session[usertype ] blir uppdaterad om man ändrar behörighet på sig själv
 * kunna klicka vidare från showDateTable för att se mer info
-* 
+* javascript login

@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
+<BODY>
+        <?php
+            include "HTML/header.php";
+        ?>
 <?php
 
 include "include/api_functions.php";
@@ -14,3 +18,5 @@ include "include/api_functions.php";
 ShowDataTable();
 
 ?>
+
+</body>
