@@ -14,8 +14,6 @@ if(!(IsBoredInDatabase($_SESSION['activity']))) {
 }
 
 
-
-
 SetFindBoredID();
 
 SetFindCocktailID();

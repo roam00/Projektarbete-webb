@@ -509,7 +509,7 @@
             
             echo "<br><br>";
             echo "<form action='writeComment.php' method='post'>";
-            echo "<button name='dateID' type='submit' value=" . $row['dateMatchID'] . ">Write a comment </button> "; 
+            echo "<button class='buttons' name='dateID' type='submit' value=" . $row['dateMatchID'] . ">Write a comment </button> "; 
     
             echo "</div>";
 
