@@ -295,8 +295,43 @@
         //var_dump ($row);
         //echo "<br><br><br><br>";
         while($row = $result->fetchArray()) {
-<<<<<<< HEAD
-            echo "<div class='resultDiv'>";
+            showRow($row);
+        }
+    }
+
+    function searchBored($type) {
+        echo $_POST['type'];
+        $db = new SQLite3("db/database.db");
+        $sql = "SELECT Bored.activity, Bored.type, Cocktail.name, Cocktail.imglink, Date.userID, Date.dateMatchID FROM 'Date' JOIN 'Cocktail' ON Date.cocktailID = Cocktail.cocktailID JOIN 'Bored' ON Date.boredID = Bored.boredID WHERE Bored.type = :type ORDER BY Date.cocktailID DESC";
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(':type', $type, SQLITE3_TEXT);
+        $result = $stmt->execute();
+        
+        while ($row = $result->fetchArray()) {
+            showRow($row);
+        }
+
+
+
+    }
+
+    function searchCocktail($category) {
+        $db = new SQLite3("db/database.db");
+        $sql = "SELECT Bored.activity, Bored.type, Cocktail.name, Cocktail.imglink, Date.userID, Date.dateMatchID FROM 'Date' JOIN 'Cocktail' ON Date.cocktailID = Cocktail.cocktailID JOIN 'Bored' ON Date.boredID = Bored.boredID WHERE Cocktail.category = :category ORDER BY Date.cocktailID DESC";
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(':category', $category, SQLITE3_TEXT);
+        $result = $stmt->execute();
+        
+        while ($row = $result->fetchArray()) {
+            showRow($row);
+        }
+
+
+
+    }
+
+    function showRow($row) {
+        echo "<div class='resultDiv'>";
             echo "<div class='boredDiv'>";
             echo "Activity: " . $row['activity'];
             echo "<br><br>";
@@ -337,79 +372,6 @@
             
 
             echo "<br><br><br><br><br><br>";
-=======
-            showRow($row);
->>>>>>> 3626c5e6f8b01d2776cfffe5fc6de138a6a504b0
-        }
-    }
-
-    function searchBored($type) {
-        echo $_POST['type'];
-        $db = new SQLite3("db/database.db");
-        $sql = "SELECT Bored.activity, Bored.type, Cocktail.name, Cocktail.imglink, Date.userID, Date.dateMatchID FROM 'Date' JOIN 'Cocktail' ON Date.cocktailID = Cocktail.cocktailID JOIN 'Bored' ON Date.boredID = Bored.boredID WHERE Bored.type = :type ORDER BY Date.cocktailID DESC";
-        $stmt = $db->prepare($sql);
-        $stmt->bindParam(':type', $type, SQLITE3_TEXT);
-        $result = $stmt->execute();
-        
-        while ($row = $result->fetchArray()) {
-            showRow($row);
-        }
-
-
-
-    }
-
-    function searchCocktail($category) {
-        $db = new SQLite3("db/database.db");
-        $sql = "SELECT Bored.activity, Bored.type, Cocktail.name, Cocktail.imglink, Date.userID, Date.dateMatchID FROM 'Date' JOIN 'Cocktail' ON Date.cocktailID = Cocktail.cocktailID JOIN 'Bored' ON Date.boredID = Bored.boredID WHERE Cocktail.category = :category ORDER BY Date.cocktailID DESC";
-        $stmt = $db->prepare($sql);
-        $stmt->bindParam(':category', $category, SQLITE3_TEXT);
-        $result = $stmt->execute();
-        
-        while ($row = $result->fetchArray()) {
-            showRow($row);
-        }
-
-
-
-    }
-
-    function showRow($row) {
-        echo "<div class='resultDiv'>";
-        echo "<div class='boredDiv'>";
-        echo "Activity: " . $row['activity'];
-        echo "<br><br>";
-        echo "Activity type: " . $row['type'];
-        echo "</div>";
-
-        echo "<div class='drinkDiv'>";
-        echo "Cocktail: " . $row['name'];
-        echo "<br><br>";
-        echo '<IMG SRC="' . $row['imglink'] . '" WIDTH=300>';
-        echo "<br><br>";
-        echo "</div>";
-        echo "</div>";
-
-       
-        
-        echo "<div class='bottomDiv'>";
-      
-        echo "Created by: " . FindUsernameByUserID($row['userID']);
-        
-        echo "<br><br>";
-        echo "<form action='writeComment.php' method='post'>";
-        echo "<button name='dateID' type='submit' value=" . $row['dateMatchID'] . ">Write a comment </button> "; 
-
-        echo "</div>";
-
-        echo "<br><br><br><br><br><br>";
-
-        
-        echo "<div class='commentDiv'>";
-        echo $row['comment'] . $row['authorUserID'];
-        echo "</div>";
-
-        echo "<br><br><br><br><br><br>";
     }
 
 ?>
