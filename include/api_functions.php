@@ -151,116 +151,7 @@
 
     }
 
-
-    function latest10() {
-        $db = new SQLite3("./db/database.db");
-        $sql = $db->prepare("SELECT * FROM 'Bored' ORDER BY boredID DESC");
-        $result = $sql->execute();
-        $i = 0;
-        while ($row = $result->fetchArray()) {
-            if ($i < 10) {
-                $sqlc = $db->prepare("SELECT * FROM 'Cocktail' WHERE cocktailID = :cocktailID");
-                $sqlc->bindParam(':cocktailID', $row['boredID'], SQLITE3_TEXT);
-                $resultc = $sqlc->execute();
-                $rowc = $resultc->fetchArray();
-                echo 'Activity: ' . $row['activity'];
-                echo '<BR>';
-                echo 'Type: ' . $row['type'];
-                echo '<BR>';
-                echo 'Participants: ' . $row['participants'];
-                echo '<BR><BR>';
-                echo 'Drink name: ' . $rowc['name'];
-                echo '<BR>';
-                echo 'Alcoholic content: ' . $rowc['alcohol'];
-                echo '<BR>';
-                echo 'Category: ' . $rowc['category'];
-                echo '<BR>';
-                echo 'Glass: ' . $rowc['glass'];
-                echo '<BR>';
-                echo 'Instructions: ' . $rowc['instructions'];
-                echo '<BR><BR>';
-
-                if ($rowc['ingr01']) {
-                    echo $rowc['ingr01'] . ' - ' . $rowc['meas01'];
-                    echo '<BR>';
-                }
-                if ($rowc['ingr02']) {
-                    echo $rowc['ingr02'] . ' - ' . $rowc['meas02'];
-                    echo '<BR>';
-                }
-                if ($rowc['ingr03']) {
-                    echo $rowc['ingr03'] . ' - ' . $rowc['meas03'];
-                    echo '<BR>';
-                }
-                if ($rowc['ingr04']) {
-                    echo $rowc['ingr04'] . ' - ' . $rowc['meas04'];
-                    echo '<BR>';
-                }
-                if ($rowc['ingr05']) {
-                    echo $rowc['ingr05'] . ' - ' . $rowc['meas05'];
-                    echo '<BR>';
-                }
-                if ($rowc['ingr06']) {
-                    echo $rowc['ingr06'] . ' - ' . $rowc['meas06'];
-                    echo '<BR>';
-                }
-                if ($rowc['ingr07']) {
-                    echo $rowc['ingr07'] . ' - ' . $rowc['meas07'];
-                    echo '<BR>';
-                }
-                if ($rowc['ingr08']) {
-                    echo $rowc['ingr08'] . ' - ' . $rowc['meas08'];
-                    echo '<BR>';
-                }
-                if ($rowc['ingr09']) {
-                    echo $rowc['ingr09'] . ' - ' . $rowc['meas09'];
-                    echo '<BR>';
-                }
-                if ($rowc['ingr10']) {
-                    echo $rowc['ingr10'] . ' - ' . $rowc['meas10'];
-                    echo '<BR>';
-                }
-                if ($rowc['ingr11']) {
-                    echo $rowc['ingr11'] . ' - ' . $rowc['meas11'];
-                    echo '<BR>';
-                }
-                if ($rowc['ingr12']) {
-                    echo $rowc['ingr12'] . ' - ' . $rowc['meas12'];
-                    echo '<BR>';
-                }
-                if ($rowc['ingr13']) {
-                    echo $rowc['ingr13'] . ' - ' . $rowc['meas13'];
-                    echo '<BR>';
-                }
-                if ($rowc['ingr14']) {
-                    echo $rowc['ingr14'] . ' - ' . $rowc['meas14'];
-                    echo '<BR>';
-                }
-                if ($rowc['ingr15']) {
-                    echo $rowc['ingr15'] . ' - ' . $rowc['meas15'];
-                    echo '<BR>';
-                }
-
-                echo '<IMG SRC="' . $rowc['imglink'] . '" WIDTH=300>';
-
-                echo '<BR><BR><BR><BR>';
-
-                $i++;
-            }
-            
-
-        }
-        
-        $db->close();
-
-    }
-
-
-
-
-
-
-    function addCombinationToDatabase() {
+     function addCombinationToDatabase() {
 
         $dbcocktail = new SQLite3("./database.db");
         $sqlc = "INSERT INTO 'Cocktail' ('name', 'alcohol', 'category', 'glass', 'instructions', 'ingr01', 'meas01', 'ingr02', 'meas02', 'ingr03', 
@@ -404,41 +295,7 @@
         //var_dump ($row);
         //echo "<br><br><br><br>";
         while($row = $result->fetchArray()) {
-            echo "<div class='resultDiv'>";
-            echo "<div class='boredDiv'>";
-            echo "Activity: " . $row['activity'];
-            echo "<br><br>";
-            echo "Activity type: " . $row['type'];
-            echo "</div>";
-
-            echo "<div class='drinkDiv'>";
-            echo "Cocktail: " . $row['name'];
-            echo "<br><br>";
-            echo '<IMG SRC="' . $row['imglink'] . '" WIDTH=300>';
-            echo "<br><br>";
-            echo "</div>";
-            echo "</div>";
-
-           
-            
-            echo "<div class='bottomDiv'>";
-          
-            echo "Created by: " . FindUsernameByUserID($row['userID']);
-            
-            echo "<br><br>";
-            echo "<form action='writeComment.php' method='post'>";
-            echo "<button name='dateID' type='submit' value=" . $row['dateMatchID'] . ">Write a comment </button> "; 
-    
-            echo "</div>";
-
-            echo "<br><br><br><br><br><br>";
-
-            
-            echo "<div class='commentDiv'>";
-            echo $row['comment'] . $row['authorUserID'];
-            echo "</div>";
-
-            echo "<br><br><br><br><br><br>";
+            showRow($row);
         }
     }
 
@@ -451,27 +308,7 @@
         $result = $stmt->execute();
         
         while ($row = $result->fetchArray()) {
-            echo "<div class='resultDiv'>";
-            echo "<div class='boredDiv'>";
-            echo "Activity: " . $row['activity'];
-            echo "<br><br>";
-            echo "Activity type: " . $row['type'];
-            echo "</div>";
-
-            echo "<div class='drinkDiv'>";
-            echo "Cocktail: " . $row['name'];
-            echo "<br><br>";
-            echo '<IMG SRC="' . $row['imglink'] . '" WIDTH=300>';
-            echo "<br><br>";
-            echo "</div>";
-            echo "</div>";
-
-            echo "<div class='bottomDiv'>";
-            echo "Created by: " . FindUsernameByUserID($row['userID']);
-            
-            echo "</div>";
-
-            echo "<br><br><br><br><br><br>";
+            showRow($row);
         }
 
 
@@ -486,31 +323,49 @@
         $result = $stmt->execute();
         
         while ($row = $result->fetchArray()) {
-            echo "<div class='resultDiv'>";
-            echo "<div class='boredDiv'>";
-            echo "Activity: " . $row['activity'];
-            echo "<br><br>";
-            echo "Activity type: " . $row['type'];
-            echo "</div>";
-
-            echo "<div class='drinkDiv'>";
-            echo "Cocktail: " . $row['name'];
-            echo "<br><br>";
-            echo '<IMG SRC="' . $row['imglink'] . '" WIDTH=300>';
-            echo "<br><br>";
-            echo "</div>";
-            echo "</div>";
-
-            echo "<div class='bottomDiv'>";
-            echo "Created by: " . FindUsernameByUserID($row['userID']);
-            
-            echo "</div>";
-
-            echo "<br><br><br><br><br><br>";
+            showRow($row);
         }
 
 
 
+    }
+
+    function showRow($row) {
+        echo "<div class='resultDiv'>";
+        echo "<div class='boredDiv'>";
+        echo "Activity: " . $row['activity'];
+        echo "<br><br>";
+        echo "Activity type: " . $row['type'];
+        echo "</div>";
+
+        echo "<div class='drinkDiv'>";
+        echo "Cocktail: " . $row['name'];
+        echo "<br><br>";
+        echo '<IMG SRC="' . $row['imglink'] . '" WIDTH=300>';
+        echo "<br><br>";
+        echo "</div>";
+        echo "</div>";
+
+       
+        
+        echo "<div class='bottomDiv'>";
+      
+        echo "Created by: " . FindUsernameByUserID($row['userID']);
+        
+        echo "<br><br>";
+        echo "<form action='writeComment.php' method='post'>";
+        echo "<button name='dateID' type='submit' value=" . $row['dateMatchID'] . ">Write a comment </button> "; 
+
+        echo "</div>";
+
+        echo "<br><br><br><br><br><br>";
+
+        
+        echo "<div class='commentDiv'>";
+        echo $row['comment'] . $row['authorUserID'];
+        echo "</div>";
+
+        echo "<br><br><br><br><br><br>";
     }
 
 ?>
