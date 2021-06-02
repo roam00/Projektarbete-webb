@@ -16,6 +16,23 @@ include "HTML/header.php";
 
     <h1> Hi <?php echo $_SESSION['username']; ?> </h1>
     <h1> Usertype: <?php echo $_SESSION['userType']; ?> </h1>
+
+    <?php
+
+    if ($_SESSION['userType'] == 1) {
+        echo '<FORM ID="addnews" NAME="addnews" METHOD="post" ACTION="addnews.php">
+        <FIELDSET>
+        <LEGEND>Add news:</LEGEND>
+        <TEXTAREA NAME="comment" ID="comment" FORM="addnews" ROWS="4" COLS="50"></TEXTAREA>
+        <BR>
+        <INPUT TYPE="submit" VALUE="Submit">
+        </FIELDSET>
+        </FORM>
+
+        ';
+    }
+
+?>
     
 
     <?php
