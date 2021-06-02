@@ -10,6 +10,7 @@
 
 <body>
     <?php
+    if(isset($_SESSION['username'])){
         include "HTML/header.php";
 
     echo "<div class = 'button_box'>";
@@ -36,6 +37,11 @@
     echo    "</form>";
     echo "</div>";
         include "HTML/footer.php";
+    }
+
+    else {
+        header('Location: index.php');
+    }
     ?>
 
 </body> 
