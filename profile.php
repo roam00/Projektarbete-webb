@@ -16,8 +16,8 @@ if(!isset($_SESSION['username'])){
             include "HTML/header.php";
         ?>
 
-        <h1> Hi <?php echo $_SESSION['username']; ?> </h1>
-        <h1> Usertype: <?php echo $_SESSION['userType']; ?> </h1>
+        <h1> <?php echo $_SESSION['username']; ?>´s profile </h1>
+        <h1> <?php if ($_SESSION['userType'] == 0){ echo 'Standard user';} else {echo 'Administrator';}; ?> </h1>
 
         <?php
             if ($_SESSION['userType'] == 1) {
