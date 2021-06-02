@@ -426,7 +426,7 @@
             echo "Created by: " . FindUsernameByUserID($row['userID']);
             
             echo "<br><br>";
-            echo "<form action='../writeComment.php' method='post'>";
+            echo "<form action='writeComment.php' method='post'>";
             echo "<button name='dateID' type='submit' value=" . $row['dateMatchID'] . ">Write a comment </button> "; 
     
             echo "</div>";

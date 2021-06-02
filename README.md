@@ -27,3 +27,4 @@ kom ihåg:
 * göra så att session[usertype ] blir uppdaterad om man ändrar behörighet på sig själv
 * kunna klicka vidare från showDateTable för att se mer info
 * javascript login
+* förhindra duplikering av cocktails och bored
