@@ -10,34 +10,38 @@
 
 <body>
     <?php
+    if(isset($_SESSION['username'])){
         include "HTML/header.php";
-    ?>
-    <div class = "button_box">
-        <form action = 'randomize_activity.php'>
-            <button class= 'buttons' type = 'submit'>Randomize activity</button>
-        </form>
 
-        <div class = 'divider'></div>
+    echo "<div class = 'button_box'>";
+    echo    "<form action = 'randomize_activity.php'>";
+    echo        "<button class= 'buttons' type = 'submit'>Randomize activity</button>";
+    echo    "</form>";
 
-        <form action = 'showDataTable.php'>
-            <button class= 'buttons' type = 'submit'>Date combinations</button>
-        </form>
+    echo    "<div class = 'divider'></div>";
 
-        <div class = 'divider'></div>
+    echo    "<form action = 'showDataTable.php'>";
+    echo        "<button class= 'buttons' type = 'submit'>Date combinations</button>";
+    echo    "</form>";
 
-        <form action = 'randomize_activity.php'>
-            <button class= 'buttons' type = 'submit'>Randomize activity</button>
-        </form>
+    echo    "<div class = 'divider'></div>";
 
-        <div class = 'divider'></div>
+    echo    "<form action = 'search.php'>";
+    echo        "<button class= 'buttons' type = 'submit'>Search</button>";
+    echo    "</form>";
 
-        <form action = 'showDataTable.php'>
-            <button class= 'buttons' type = 'submit'>Date combinations</button>
-        </form>
-    </div>
+    echo    "<div class = 'divider'></div>";
 
-    <?php
+    echo    "<form action = 'showDataTable.php'>";
+    echo        "<button class= 'buttons' type = 'submit'>Date combinations</button>";
+    echo    "</form>";
+    echo "</div>";
         include "HTML/footer.php";
+    }
+
+    else {
+        header('Location: index.php');
+    }
     ?>
 
 </body> 
