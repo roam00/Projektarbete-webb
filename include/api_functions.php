@@ -419,13 +419,16 @@
             echo "</div>";
             echo "</div>";
 
+           
+            
+            echo "<div class='bottomDiv'>";
+          
+            echo "Created by: " . FindUsernameByUserID($row['userID']);
+            
+            echo "<br><br>";
             echo "<form action='../writeComment.php' method='post'>";
             echo "<button name='dateID' type='submit' value=" . $row['dateMatchID'] . ">Write a comment </button> "; 
     
-            
-            echo "<div class='bottomDiv'>";
-            echo "Created by: " . FindUsernameByUserID($row['userID']);
-            
             echo "</div>";
 
             echo "<br><br><br><br><br><br>";

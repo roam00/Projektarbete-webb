@@ -21,7 +21,7 @@ function AddReply($dateID){
     $date = date("Y-m-d H:i:s");
 
 
-    $db = new SQLite3("datebase.db");
+    $db = new SQLite3("database.db");
     $sql = "INSERT INTO 'Review' ('userID', 'comment', 'date', 'dateMatchID') VALUES (:userID, :message, :date, :dateID)";
     $stmt = $db->prepare($sql);
     $stmt->bindParam(':userID', $userID, SQLITE3_TEXT);
