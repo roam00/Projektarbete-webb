@@ -16,7 +16,21 @@
         <form action = 'randomize_activity.php'>
             <button class= 'buttons' type = 'submit'>Randomize activity</button>
         </form>
-            <div class = 'divider'></div>
+
+        <div class = 'divider'></div>
+
+        <form action = 'showDataTable.php'>
+            <button class= 'buttons' type = 'submit'>Date combinations</button>
+        </form>
+
+        <div class = 'divider'></div>
+
+        <form action = 'randomize_activity.php'>
+            <button class= 'buttons' type = 'submit'>Randomize activity</button>
+        </form>
+
+        <div class = 'divider'></div>
+
         <form action = 'showDataTable.php'>
             <button class= 'buttons' type = 'submit'>Date combinations</button>
         </form>
