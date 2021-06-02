@@ -368,13 +368,11 @@
         }
         
         if ($stmtdate->execute()) {
-            echo 'hej';
             $dbdate->close();
             $dbdatecocktail->close();
             $dbdatebored->close();
         }
         else {
-            echo 'nej';
             $dbdate->close();
             $dbdatecocktail->close();
             $dbdatebored->close();
