@@ -151,21 +151,27 @@
 
     }
 
-    function isCocktailInDatabase {
-
-    }
-
-    function isBoredInDatabase {
-
-    }
-
-    function isEmailInDB($email){
+    function IsCocktailInDatabase($name) {
         $db = new SQLite3("database.db");
-        $stmt = $db->prepare("SELECT * FROM 'User' WHERE email = :email");
-        $stmt->bindParam(':email', $email, SQLITE3_TEXT);
+        $stmt = $db->prepare("SELECT * FROM 'Cocktail' WHERE name = :name");
+        $stmt->bindParam(':name', $name, SQLITE3_TEXT);
         $result = $stmt->execute();
         $row = $result->fetchArray();
-        if($row['email'] == $email){
+        if($row['name'] == $name){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    function IsBoredInDatabase($activity) {
+        $db = new SQLite3("database.db");
+        $stmt = $db->prepare("SELECT * FROM 'Bored' WHERE activity = :activity");
+        $stmt->bindParam(':activity', $activity, SQLITE3_TEXT);
+        $result = $stmt->execute();
+        $row = $result->fetchArray();
+        if($row['activity'] == $activity){
             return true;
         }
         else{
@@ -174,6 +180,130 @@
     }
 
 
+    function AddCocktailToDatabase() {
+        $dbcocktail = new SQLite3("./database.db");
+        $sqlc = "INSERT INTO 'Cocktail' ('name', 'alcohol', 'category', 'glass', 'instructions', 'ingr01', 'meas01', 'ingr02', 'meas02', 'ingr03', 
+        'meas03', 'ingr04', 'meas04', 'ingr05', 'meas05', 'ingr06', 'meas06', 'ingr07', 'meas07', 'ingr08', 'meas08', 'ingr09', 'meas09', 
+        'ingr10', 'meas10', 'ingr11', 'meas11', 'ingr12', 'meas12', 'ingr13', 'meas13', 'ingr14', 'meas14', 'ingr15', 'meas15', 'imglink') 
+        VALUES (:name, :alcohol, :category, :glass, :instructions, :ingr01, :meas01, :ingr02, :meas02, :ingr03, :meas03, :ingr04, :meas04, :ingr05, 
+        :meas05, :ingr06, :meas06, :ingr07, :meas07, :ingr08, :meas08, :ingr09, :meas09, :ingr10, :meas10, :ingr11, :meas11, :ingr12, :meas12, :ingr13, 
+        :meas13, :ingr14, :meas14, :ingr15, :meas15, :imglink)";
+        $stmtc = $dbcocktail->prepare($sqlc);
+        $stmtc->bindParam(':name', $_SESSION['strDrink'], SQLITE3_TEXT);
+        $stmtc->bindParam(':alcohol', $_SESSION['strAlcoholic'], SQLITE3_TEXT);
+        $stmtc->bindParam(':category', $_SESSION['strCategory'], SQLITE3_TEXT);
+        $stmtc->bindParam(':glass', $_SESSION['strGlass'], SQLITE3_TEXT);
+        $stmtc->bindParam(':instructions', $_SESSION['strInstructions'], SQLITE3_TEXT);
+        $stmtc->bindParam(':ingr01', $_SESSION['strIngredient1'], SQLITE3_TEXT);
+        $stmtc->bindParam(':meas01', $_SESSION['strMeasure1'], SQLITE3_TEXT);
+        $stmtc->bindParam(':ingr02', $_SESSION['strIngredient2'], SQLITE3_TEXT);
+        $stmtc->bindParam(':meas02', $_SESSION['strMeasure2'], SQLITE3_TEXT);
+        $stmtc->bindParam(':ingr03', $_SESSION['strIngredient3'], SQLITE3_TEXT);
+        $stmtc->bindParam(':meas03', $_SESSION['strMeasure3'], SQLITE3_TEXT);
+        $stmtc->bindParam(':ingr04', $_SESSION['strIngredient4'], SQLITE3_TEXT);
+        $stmtc->bindParam(':meas04', $_SESSION['strMeasure4'], SQLITE3_TEXT);
+        $stmtc->bindParam(':ingr05', $_SESSION['strIngredient5'], SQLITE3_TEXT);
+        $stmtc->bindParam(':meas05', $_SESSION['strMeasure5'], SQLITE3_TEXT);
+        $stmtc->bindParam(':ingr06', $_SESSION['strIngredient6'], SQLITE3_TEXT);
+        $stmtc->bindParam(':meas06', $_SESSION['strMeasure6'], SQLITE3_TEXT);
+        $stmtc->bindParam(':ingr07', $_SESSION['strIngredient7'], SQLITE3_TEXT);
+        $stmtc->bindParam(':meas07', $_SESSION['strMeasure7'], SQLITE3_TEXT);
+        $stmtc->bindParam(':ingr08', $_SESSION['strIngredient8'], SQLITE3_TEXT);
+        $stmtc->bindParam(':meas08', $_SESSION['strMeasure8'], SQLITE3_TEXT);
+        $stmtc->bindParam(':ingr09', $_SESSION['strIngredient9'], SQLITE3_TEXT);
+        $stmtc->bindParam(':meas09', $_SESSION['strMeasure9'], SQLITE3_TEXT);
+        $stmtc->bindParam(':ingr10', $_SESSION['strIngredient10'], SQLITE3_TEXT);
+        $stmtc->bindParam(':meas10', $_SESSION['strMeasure10'], SQLITE3_TEXT);
+        $stmtc->bindParam(':ingr11', $_SESSION['strIngredient11'], SQLITE3_TEXT);
+        $stmtc->bindParam(':meas11', $_SESSION['strMeasure11'], SQLITE3_TEXT);
+        $stmtc->bindParam(':ingr12', $_SESSION['strIngredient12'], SQLITE3_TEXT);
+        $stmtc->bindParam(':meas12', $_SESSION['strMeasure12'], SQLITE3_TEXT);
+        $stmtc->bindParam(':ingr13', $_SESSION['strIngredient13'], SQLITE3_TEXT);
+        $stmtc->bindParam(':meas13', $_SESSION['strMeasure13'], SQLITE3_TEXT);
+        $stmtc->bindParam(':ingr14', $_SESSION['strIngredient14'], SQLITE3_TEXT);
+        $stmtc->bindParam(':meas14', $_SESSION['strMeasure14'], SQLITE3_TEXT);
+        $stmtc->bindParam(':ingr15', $_SESSION['strIngredient15'], SQLITE3_TEXT);
+        $stmtc->bindParam(':meas15', $_SESSION['strMeasure15'], SQLITE3_TEXT);
+        $stmtc->bindParam(':imglink', $_SESSION['strDrinkThumb'], SQLITE3_TEXT);
+        
+        if ($stmtc->execute()) {
+            $dbcocktail->close();
+        }
+    
+        else {
+            $dbcocktail->close();
+        }
+    }
+
+
+
+    function AddBoredToDatabase() {
+        $dbbored = new SQLite3("./database.db");
+        $sqlb = "INSERT INTO 'Bored' ('activity', 'type', 'participants') VALUES (:activity, :type, :participants)";
+        $stmtb = $dbbored->prepare($sqlb);
+        $stmtb->bindParam(':activity', $_SESSION['activity'], SQLITE3_TEXT);
+        $stmtb->bindParam(':type', $_SESSION['type'], SQLITE3_TEXT);
+        $stmtb->bindParam(':participants', $_SESSION['participants'], SQLITE3_TEXT);
+
+        if ($stmtb->execute()) {
+            $dbbored->close();
+        }
+
+        else {
+            $dbbored->close();
+        }
+    }
+
+
+    function AddDateToDatabase(){
+        $dbdate = new SQLite3("./database.db");
+        $sqldate = "INSERT INTO 'Date' ('cocktailID', 'boredID', 'userID') VALUES (:cocktailID, :boredID, :userID)";
+        $stmtdate = $dbdate->prepare($sqldate);
+        $stmtdate->bindParam(':cocktailID', $_SESSION['cocktailID'], SQLITE3_INTEGER);
+        $stmtdate->bindParam(':boredID', $_SESSION['boredID'], SQLITE3_INTEGER);
+        $stmtdate->bindParam(':userID', $_SESSION['userID'], SQLITE3_INTEGER);
+
+        if ($stmtdate->execute()) {
+            $dbdate->close();
+        }
+        else {
+            $dbdate->close();
+        }
+    }
+
+    function SetFindBoredID() {
+        $dbdatebored = new SQLite3("./database.db");
+        $sqldatebored = "SELECT * FROM 'Bored' WHERE activity LIKE :activity";
+        $stmtdatebored = $dbdatebored->prepare($sqldatebored);
+        $stmtdatebored->bindParam(':activity', $_SESSION['activity'], SQLITE3_TEXT);
+        $resultdatebored = $stmtdatebored->execute();
+
+        
+        $rowdatebored = $resultdatebored->fetchArray();
+        $_SESSION['boredID'] = $rowdatebored['boredID'];
+        return $rowdatebored['boredID'];
+    }
+
+    function SetFindCocktailID() {
+
+        $dbdatecocktail = new SQLite3("./database.db");
+        $sqldatecocktail = "SELECT * FROM 'Cocktail' WHERE name LIKE :name";
+        $stmtdatecocktail = $dbdatecocktail->prepare($sqldatecocktail);
+        $stmtdatecocktail->bindParam(':name', $_SESSION['strDrink'], SQLITE3_TEXT);
+        $resultdatecocktail = $stmtdatecocktail->execute();
+
+        $rowdatecocktail = $resultdatecocktail->fetchArray();
+        $_SESSION['cocktailID'] = $rowdatecocktail['cocktailID'];
+        return $rowdatecocktail['cocktailID'];
+       
+    }
+
+
+
+    
+
+
+    /*
     function addCombinationToDatabase() {
 
         $dbcocktail = new SQLite3("./database.db");
@@ -292,6 +422,8 @@
             $dbdatebored->close();
         }
     }
+
+    */
 
 
     function FindUsernameByUserID($userID) {

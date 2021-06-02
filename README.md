@@ -30,4 +30,4 @@ kom ihåg:
 * förhindra duplikering av cocktails och bored
 * lägga till footer där det står upphovsman
 * dokumentation förklara cocktaildatabas-lösningen
-*
+* 
