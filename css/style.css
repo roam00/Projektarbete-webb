@@ -36,6 +36,24 @@ input[type=password] {
   	transform: translate(-50%, -50%);
 }
 
+.home_buttons {
+    padding: 10px 25px;
+    border: none;
+    background-color: rgb(122, 122, 122);
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-family:'Courier New', Courier, monospace;
+    font-size: 120%;
+    border-radius: 5px;
+    width: 200px;
+    transition-duration: 0.4s;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
 .buttons {
     padding: 10px 25px;
     border: none;

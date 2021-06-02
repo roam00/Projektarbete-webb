@@ -15,26 +15,22 @@
 
     echo "<div class = 'button_box'>";
     echo    "<form action = 'randomize_activity.php'>";
-    echo        "<button class= 'buttons' type = 'submit'>Randomize activity</button>";
+    echo        "<button class= 'home_buttons' type = 'submit'>Randomize activity</button>";
     echo    "</form>";
 
     echo    "<div class = 'divider'></div>";
 
     echo    "<form action = 'showDataTable.php'>";
-    echo        "<button class= 'buttons' type = 'submit'>Date combinations</button>";
+    echo        "<button class= 'home_buttons' type = 'submit'>Date combinations</button>";
     echo    "</form>";
 
     echo    "<div class = 'divider'></div>";
 
     echo    "<form action = 'search.php'>";
-    echo        "<button class= 'buttons' type = 'submit'>Search</button>";
+    echo        "<button class= 'home_buttons' type = 'submit'>Search</button>";
     echo    "</form>";
 
     echo    "<div class = 'divider'></div>";
-
-    echo    "<form action = 'showDataTable.php'>";
-    echo        "<button class= 'buttons' type = 'submit'>Date combinations</button>";
-    echo    "</form>";
     echo "</div>";
         include "HTML/footer.php";
     }
