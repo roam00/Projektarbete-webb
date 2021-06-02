@@ -31,7 +31,7 @@
                 <input class = 'input' type="password" id="password" name="password" placeholder="Password"><br><br>
                 <label for="reppassword"></label>
                 <input class = 'input' type="password" id="reppassword" name="reppassword" placeholder="Repeat password"><br><br>
-                <button class = 'button' type="submit" value="Register account" id="send">Register</button>
+                <button class = 'button7' type="submit" value="Register account" id="send">Register</button>
             </form>
         </div>
     <script src="./js/script.js"></script>
