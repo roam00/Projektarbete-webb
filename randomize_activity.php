@@ -40,15 +40,6 @@ include "HTML/header.php";
                     <OPTION VALUE="busywork">Busywork</OPTION>
                 </SELECT>
                 <BR>
-                <LABEL FOR="participants">Number of people:</LABEL>
-                <SELECT ID="participants" NAME="participants">
-                    <OPTION VALUE="">-</OPTION>
-                    <OPTION VALUE="1">1</OPTION>
-                    <OPTION VALUE="2">2</OPTION>
-                    <OPTION VALUE="3">3</OPTION>
-                    <OPTION VALUE="4">4</OPTION>
-                </SELECT>
-                <BR>
                 <INPUT TYPE="submit" VALUE="Send!">
             </FIELDSET>
         </FORM>
