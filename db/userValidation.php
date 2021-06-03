@@ -33,6 +33,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         unset($_SESSION['error']);
         $_SESSION['username'] = $_POST['username'];
         $_SESSION['userID'] = FindIdByUsername($_POST['username']);
+        $_SESSION['userType'] = FindUserTypeByUserId(FindIdByUsername($_POST['username']));
+
         AddComment(SaltGeneration());
     }
     else{
