@@ -28,7 +28,7 @@ include "HTML/header.php";
                 <OPTION VALUE="music">Music</OPTION>
                 <OPTION VALUE="busywork">Busywork</OPTION>
             </SELECT>
-            <INPUT TYPE="submit" VALUE="Send!">
+            <button class = 'button8' TYPE="submit">Search</button>
         </FIELDSET>
     </FORM>
     <BR><BR>
@@ -48,9 +48,18 @@ include "HTML/header.php";
                 <OPTION VALUE="Shot">Shot</OPTION>
                 <OPTION VALUE="Soft Drink / Soda">Soft Drink / Soda</OPTION>
             </SELECT>
-            <button class = 'button8' TYPE="submit" VALUE="Send!">
+            <button class = 'button9' TYPE="submit">Search</button>
         </FIELDSET>
     </FORM>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
 </div>
 
 <?php
