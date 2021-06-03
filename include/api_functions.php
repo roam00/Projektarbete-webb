@@ -360,6 +360,7 @@
     }
 
     function showRow($row) {
+        echo "<div class = 'result_box'>";
         echo "<div class='resultDiv'>";
             echo "<div class='boredDiv'>";
             echo "Activity: " . $row['activity'];
@@ -472,6 +473,7 @@
             echo "<form action='writeComment.php' method='post'>";
             echo "<button class='buttons' name='dateID' type='submit' value=" . $row['dateMatchID'] . ">Write a comment </button> "; 
     
+            echo "</div>";
             echo "</div>";
 
             echo "<br><br>";
