@@ -14,13 +14,10 @@ if(!isset($_SESSION['username'])){
     <body>
         <?php
             include "HTML/header.php";
-        ?>
+            include "include/api_functions.php";
+            displayNews();
 
-        <h1> <?php echo $_SESSION['username']; ?>´s profile </h1>
-        <h1> <?php if ($_SESSION['userType'] == 0){ echo 'Standard user';} else {echo 'Administrator';}; ?> </h1>
-
-    <?php
-        include "HTML/footer.php";
+            include "HTML/footer.php";
     ?>
     </body>
 </html>

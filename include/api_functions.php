@@ -529,4 +529,39 @@
             echo "<br><br><br><br><br><br>";
     }
 
+    function addNews($comment) {
+        $db = new SQLite3("db/database.db");
+        $sql = "INSERT INTO 'News' ('userID', 'message') VALUES (:userID, :message)";
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(':userID', $_SESSION['userID'], SQLITE3_TEXT);
+        $stmt->bindParam(':message', $comment, SQLITE3_TEXT);
+
+        if ($stmt->execute()) {
+            $db->close();
+        }
+        else {
+            $db->close();
+        }
+
+    }
+
+    function displayNews() {
+        echo 'asdf';
+        $db = new SQLite3("db/database.db");
+        $sql = "SELECT * FROM User JOIN News ON User.userID = News.userID ORDER BY newsID DESC";
+        $stmt = $db->query($sql);
+        //$result = $stmt->execute();
+
+        
+        while ($row = $stmt->fetchArray()) {
+            echo $row['message'];
+            echo '<BR><BR>';
+            echo 'by ' . $row['username'];
+            echo '<BR><BR><BR><BR>';
+        }
+
+    }
+
+
+
 ?>

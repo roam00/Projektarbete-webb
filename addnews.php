@@ -12,8 +12,8 @@
         include "HTML/header.php";
         include "include/api_functions.php";
 
-
-    addNews($comment);
+         addNews($_POST['comment']);
+         echo 'News successfully added.';
 
 
 

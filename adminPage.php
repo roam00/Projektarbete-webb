@@ -27,6 +27,16 @@
     ?>
     <h1> Hi <?php echo $_SESSION['username']; ?> </h1>
     <h1> Your userType: <?php echo $_SESSION['userType']; ?> </h1>
+
+    <FORM ID="addnews" NAME="addnews" METHOD="post" ACTION="addnews.php">
+                <FIELDSET>
+                <LEGEND>Add news:</LEGEND>
+                <TEXTAREA NAME="comment" ID="comment" FORM="addnews" ROWS="4" COLS="50"></TEXTAREA>
+                <INPUT TYPE="hidden" NAME="test" VALUE="123">
+                <BR>
+                <INPUT TYPE="submit" VALUE="Submit">
+                </FIELDSET>
+                </FORM>
     
     <?php
         include "db/showUsers.php";
