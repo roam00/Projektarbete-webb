@@ -36,7 +36,7 @@ include "HTML/header.php";
         <FIELDSET>
             <LEGEND>Filter cocktails:</LEGEND>
             <LABEL FOR="type">Cocktail type:</LABEL>
-            <SELECT class = 'dropdown_content' ID="category" NAME="category">
+            <SELECT ID="type" NAME="type">
                 <OPTION VALUE="">-</OPTION>
                 <OPTION VALUE="Beer">Beer</OPTION>
                 <OPTION VALUE="Cocktail">Cocktail</OPTION>
