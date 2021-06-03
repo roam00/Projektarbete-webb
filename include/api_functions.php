@@ -633,7 +633,6 @@
     }
 
     function displayNews() {
-        echo 'asdf';
         $db = new SQLite3("db/database.db");
         $sql = "SELECT * FROM User JOIN News ON User.userID = News.userID ORDER BY newsID DESC";
         $stmt = $db->query($sql);
@@ -641,9 +640,11 @@
 
         
         while ($row = $stmt->fetchArray()) {
+            echo "<div class='resultDiv'>";
             echo $row['message'];
             echo '<BR><BR>';
             echo 'by ' . $row['username'];
+            echo "</div>";
             echo '<BR><BR><BR><BR>';
         }
 
