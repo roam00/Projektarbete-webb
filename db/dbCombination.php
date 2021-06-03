@@ -3,6 +3,8 @@ session_start();
 
 //addCombinationToDatabase();
 
+header("Location: ../showDataTable.php");
+
 
 if(!(IsCocktailInDatabase($_SESSION['strDrink']))) {
     AddCocktailToDatabase();
