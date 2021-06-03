@@ -315,7 +315,7 @@
 
     function ShowDataTable() {
         $db = new SQLite3("db/database.db");
-        $sqldate = "SELECT * FROM 'Date' JOIN 'Cocktail' ON Date.cocktailID = Cocktail.cocktailID JOIN 'Bored' ON Date.boredID = Bored.boredID LEFT JOIN 'Review' ON Review.dateMatchID = Date.dateMatchID ORDER BY Date.cocktailID DESC";
+        $sqldate = "SELECT * FROM 'Date' JOIN 'Cocktail' ON Date.cocktailID = Cocktail.cocktailID JOIN 'Bored' ON Date.boredID = Bored.boredID ORDER BY Date.cocktailID DESC";
         $result = $db->query($sqldate);
 
 
@@ -327,6 +327,27 @@
             showRow($row);
         }
     }
+
+
+    function ShowComments($dateMatchID) {
+        $db = new SQLite3("db/database.db");
+        $sqldate = "SELECT * FROM 'Review' WHERE dateMatchID = :dateMatchID ORDER BY reviewID DESC";
+        $stmt = $db->prepare($sqldate);
+        $stmt->bindParam(':dateMatchID', $dateMatchID, SQLITE3_TEXT);
+        $result = $stmt->execute();
+    
+
+        while($row = $result->fetchArray()) {
+            echo "<div class='commentDiv'>";
+            echo "Comment: " . $row['comment'];
+            echo "<br>";
+            echo "Author: " . FindUsernameByUserID($row['authorUserID']);
+            echo "<br>";
+            echo "Date: " . $row['date'];
+            echo "</div>";
+        }
+    }
+
 
     function searchBored($type) {
         echo $_POST['type'];
@@ -478,15 +499,13 @@
 
             echo "<br><br>";
 
-            if(isset($row['comment'])) {
-                echo "<div class='commentDiv'>";
-                echo "Comment: " . $row['comment'];
-                echo "<br>";
-                echo "Author: " . FindUsernameByUserID($row['authorUserID']);
-                echo "<br>";
-                echo "Date: " . $row['date'];
-                echo "</div>";
-            }
+
+
+            //if(isset($row['comment'])) {
+              
+            //}
+
+            ShowComments($row['dateMatchID']);
             
 
             echo "<br><br><br><br><br><br>";
