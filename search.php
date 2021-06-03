@@ -36,7 +36,7 @@ include "HTML/header.php";
         <FIELDSET>
             <LEGEND>Filter cocktails:</LEGEND>
             <LABEL FOR="type">Cocktail type:</LABEL>
-            <SELECT ID="category" NAME="category">
+            <SELECT class = 'dropdown_content' ID="category" NAME="category">
                 <OPTION VALUE="">-</OPTION>
                 <OPTION VALUE="Beer">Beer</OPTION>
                 <OPTION VALUE="Cocktail">Cocktail</OPTION>
@@ -51,15 +51,6 @@ include "HTML/header.php";
             <button class = 'button9' TYPE="submit">Search</button>
         </FIELDSET>
     </FORM>
-</div>
-
-<div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
 </div>
 
 <?php
