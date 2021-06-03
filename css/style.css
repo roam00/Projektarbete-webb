@@ -378,7 +378,7 @@ text{
 
 .resultDiv {
     display: flex;
-    background-color: rgba(250, 240, 230, 0);
+    background-color: rgb(172, 255, 234);
     padding: 40px 40px;
 }
 
@@ -392,12 +392,12 @@ text{
     padding: 40px 40px;
 }
 .bottomDiv {
-    background-color: rgba(250, 240, 230, 0);
+    background-color: rgb(172, 255, 234);
     padding: 40px 40px;
     
 }
 .commentDiv {
-    background-color: rgba(250, 240, 230, 0);
+    background-color: rgb(172, 255, 234);
     padding: 40px 40px;
 }
 

@@ -441,7 +441,7 @@
 
     function ShowDataTable() {
         $db = new SQLite3("db/database.db");
-        $sqldate = "SELECT Bored.activity, Bored.type, Cocktail.name, Cocktail.imglink, Date.userID, Date.dateMatchID, Review.authorUserID, Review.comment, Review.date FROM 'Date' JOIN 'Cocktail' ON Date.cocktailID = Cocktail.cocktailID JOIN 'Bored' ON Date.boredID = Bored.boredID LEFT JOIN 'Review' ON Review.dateMatchID = Date.dateMatchID ORDER BY Date.cocktailID DESC";
+        $sqldate = "SELECT * FROM 'Date' JOIN 'Cocktail' ON Date.cocktailID = Cocktail.cocktailID JOIN 'Bored' ON Date.boredID = Bored.boredID LEFT JOIN 'Review' ON Review.dateMatchID = Date.dateMatchID ORDER BY Date.cocktailID DESC";
         $result = $db->query($sqldate);
 
 
@@ -491,6 +491,84 @@
             echo "Activity: " . $row['activity'];
             echo "<br><br>";
             echo "Activity type: " . $row['type'];
+            echo "<br><br><br>";
+            echo "Drink recipe:";
+            echo "<br><br>";
+            echo "Alcoholic content: " . $row['alcohol'];
+            echo "<br><br>";
+            echo "Category: " . $row['category'];
+            echo "<br><br>";
+            echo "Glass: " . $row['glass'];
+            echo "<br><br>";
+            echo "Instructions: " . $row['instructions'];
+            echo "<br><br>";
+
+            if ($row['ingr01']) {
+                echo $row['ingr01'] . ' - ' . $row['meas01'];
+                echo '<BR>';
+            }
+            if ($row['ingr02']) {
+                echo $row['ingr02'] . ' - ' . $row['meas02'];
+                echo '<BR>';
+            }
+            if ($row['ingr03']) {
+                echo $row['ingr03'] . ' - ' . $row['meas03'];
+                echo '<BR>';
+            }
+            if ($row['ingr04']) {
+                echo $row['ingr04'] . ' - ' . $row['meas04'];
+                echo '<BR>';
+            }
+            if ($row['ingr05']) {
+                echo $row['ingr05'] . ' - ' . $row['meas05'];
+                echo '<BR>';
+            }
+            if ($row['ingr06']) {
+                echo $row['ingr06'] . ' - ' . $row['meas06'];
+                echo '<BR>';
+            }
+            if ($row['ingr07']) {
+                echo $row['ingr07'] . ' - ' . $row['meas07'];
+                echo '<BR>';
+            }
+            if ($row['ingr08']) {
+                echo $row['ingr08'] . ' - ' . $row['meas08'];
+                echo '<BR>';
+            }
+            if ($row['ingr09']) {
+                echo $row['ingr09'] . ' - ' . $row['meas09'];
+                echo '<BR>';
+            }
+            if ($row['ingr10']) {
+                echo $row['ingr10'] . ' - ' . $row['meas10'];
+                echo '<BR>';
+            }
+            if ($row['ingr11']) {
+                echo $row['ingr11'] . ' - ' . $row['meas11'];
+                echo '<BR>';
+            }
+            if ($row['ingr12']) {
+                echo $row['ingr12'] . ' - ' . $row['meas12'];
+                echo '<BR>';
+            }
+            if ($row['ingr13']) {
+                echo $row['ingr13'] . ' - ' . $row['meas13'];
+                echo '<BR>';
+            }
+            if ($row['ingr14']) {
+                echo $row['ingr14'] . ' - ' . $row['meas14'];
+                echo '<BR>';
+            }
+            if ($row['ingr15']) {
+                echo $row['ingr15'] . ' - ' . $row['meas15'];
+                echo '<BR>';
+            }
+
+
+
+
+
+
             echo "</div>";
 
             echo "<div class='drinkDiv'>";
@@ -498,6 +576,15 @@
             echo "<br><br>";
             echo '<IMG SRC="' . $row['imglink'] . '" WIDTH=300>';
             echo "<br><br>";
+
+
+
+
+
+
+
+
+
             echo "</div>";
             echo "</div>";
 
@@ -546,7 +633,6 @@
     }
 
     function displayNews() {
-        echo 'asdf';
         $db = new SQLite3("db/database.db");
         $sql = "SELECT * FROM User JOIN News ON User.userID = News.userID ORDER BY newsID DESC";
         $stmt = $db->query($sql);
@@ -554,9 +640,11 @@
 
         
         while ($row = $stmt->fetchArray()) {
+            echo "<div class='resultDiv'>";
             echo $row['message'];
             echo '<BR><BR>';
             echo 'by ' . $row['username'];
+            echo "</div>";
             echo '<BR><BR><BR><BR>';
         }
 
