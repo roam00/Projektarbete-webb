@@ -35,8 +35,8 @@ include "HTML/header.php";
     <FORM NAME="cocktail" METHOD="post" ACTION="searchcocktail.php">
         <FIELDSET>
             <LEGEND>Filter cocktails:</LEGEND>
-            <LABEL FOR="type">Cocktail type:</LABEL>
-            <SELECT ID="type" NAME="type">
+            <LABEL FOR="category">Cocktail type:</LABEL>
+            <SELECT ID="category" NAME="category">
                 <OPTION VALUE="">-</OPTION>
                 <OPTION VALUE="Beer">Beer</OPTION>
                 <OPTION VALUE="Cocktail">Cocktail</OPTION>

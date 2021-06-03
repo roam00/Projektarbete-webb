@@ -352,7 +352,7 @@
     function searchBored($type) {
         echo $_POST['type'];
         $db = new SQLite3("db/database.db");
-        $sql = "SELECT Bored.activity, Bored.type, Cocktail.name, Cocktail.imglink, Date.userID, Date.dateMatchID FROM 'Date' JOIN 'Cocktail' ON Date.cocktailID = Cocktail.cocktailID JOIN 'Bored' ON Date.boredID = Bored.boredID WHERE Bored.type = :type ORDER BY Date.cocktailID DESC";
+        $sql = "SELECT * FROM 'Date' JOIN 'Cocktail' ON Date.cocktailID = Cocktail.cocktailID JOIN 'Bored' ON Date.boredID = Bored.boredID WHERE Bored.type = :type ORDER BY Date.cocktailID DESC";
         $stmt = $db->prepare($sql);
         $stmt->bindParam(':type', $type, SQLITE3_TEXT);
         $result = $stmt->execute();
@@ -367,7 +367,7 @@
 
     function searchCocktail($category) {
         $db = new SQLite3("db/database.db");
-        $sql = "SELECT Bored.activity, Bored.type, Cocktail.name, Cocktail.imglink, Date.userID, Date.dateMatchID FROM 'Date' JOIN 'Cocktail' ON Date.cocktailID = Cocktail.cocktailID JOIN 'Bored' ON Date.boredID = Bored.boredID WHERE Cocktail.category = :category ORDER BY Date.cocktailID DESC";
+        $sql = "SELECT * FROM 'Date' JOIN 'Cocktail' ON Date.cocktailID = Cocktail.cocktailID JOIN 'Bored' ON Date.boredID = Bored.boredID WHERE Cocktail.category = :category ORDER BY Date.cocktailID DESC";
         $stmt = $db->prepare($sql);
         $stmt->bindParam(':category', $category, SQLITE3_TEXT);
         $result = $stmt->execute();
