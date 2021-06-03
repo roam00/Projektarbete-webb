@@ -31,6 +31,10 @@
     echo    "</form>";
 
     echo    "<div class = 'divider'></div>";
+
+    echo    "<form action = 'news.php'>";
+    echo        "<button class= 'button10' type = 'submit'>News</button>";
+    echo    "</form>";
     echo "</div>";
         include "HTML/footer.php";
     }
