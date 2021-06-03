@@ -17,7 +17,6 @@ include "HTML/header.php";
             <LEGEND>Filter activities:</LEGEND>
             <LABEL FOR="type">Activity type:</LABEL>
             <SELECT ID="type" NAME="type">
-                <OPTION VALUE="">-</OPTION>
                 <OPTION VALUE="education">Education</OPTION>
                 <OPTION VALUE="recreational">Recreational</OPTION>
                 <OPTION VALUE="social">Social</OPTION>
@@ -37,7 +36,6 @@ include "HTML/header.php";
             <LEGEND>Filter cocktails:</LEGEND>
             <LABEL FOR="category">Cocktail type:</LABEL>
             <SELECT ID="category" NAME="category">
-                <OPTION VALUE="">-</OPTION>
                 <OPTION VALUE="Beer">Beer</OPTION>
                 <OPTION VALUE="Cocktail">Cocktail</OPTION>
                 <OPTION VALUE="Coffee / Tea">Coffee / Tea</OPTION>
