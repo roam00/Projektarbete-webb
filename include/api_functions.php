@@ -134,9 +134,6 @@
         if ($_GET['type']) {
             $finalurl = $finalurl . '?type=' . $_GET['type'];
         }
-        if ($_GET['participants']) {
-            $finalurl = $finalurl . '?participants=' . $_GET['participants'];
-        }
         $result = file_get_contents($finalurl);
         $details = json_decode($result, TRUE);
         echo 'activity: ' . $details['activity'];
