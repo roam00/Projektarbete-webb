@@ -104,7 +104,7 @@ input[type=password] {
     margin: 0;
     position: absolute;
     top: 50%;
-    left: 35%;
+    left: 28%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -123,7 +123,7 @@ input[type=password] {
     margin: 0;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 43%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -142,7 +142,26 @@ input[type=password] {
     margin: 0;
     position: absolute;
     top: 50%;
-    left: 65%;
+    left: 58%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.button10 {
+    padding: 31px 25px;
+    border: none;
+    background-color: rgb(122, 122, 122);
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-family:'Courier New', Courier, monospace;
+    font-size: 120%;
+    border-radius: 5px;
+    width: 200px;
+    transition-duration: 0.4s;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 73%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -236,7 +255,7 @@ input[type=password] {
     display: block;
   }
 
-  .dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: #ddd;}
 
 .search_box {
         padding: 5px;
@@ -402,7 +421,7 @@ text{
 
 .resultDiv {
     display: flex;
-    background-color: rgba(250, 240, 230, 0);
+    background-color: rgb(172, 255, 234);
     padding: 40px 40px;
 }
 
@@ -416,11 +435,11 @@ text{
     padding: 40px 40px;
 }
 .bottomDiv {
-    background-color: rgba(250, 240, 230, 0);
+    background-color: rgb(172, 255, 234);
     padding: 40px 40px;
     
 }
 .commentDiv {
-    background-color: rgba(250, 240, 230, 0);
+    background-color: rgb(172, 255, 234);
     padding: 40px 40px;
 }
